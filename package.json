@@ -1,0 +1,45 @@
+{
+  "name": "aiqna_common_v1",
+  "version": "0.1.0",
+  "description": "Common modules for AI QNA API Server and Admin User Frontend",
+  "keywords": [
+    "aiqna"
+  ],
+  "homepage": "https://github.com/jepilyun/aiqna_common_v1#readme",
+  "bugs": {
+    "url": "https://github.com/jepilyun/aiqna_common_v1/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jepilyun/aiqna_common_v1.git"
+  },
+  "license": "ISC",
+  "author": "jepilyun",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "eslint --fix '**/**/*.ts'",
+    "prettier": "prettier --write --config ./.prettierrc.json '**/*.ts'",
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@types/express": "^5.0.1",
+    "@typescript-eslint/eslint-plugin": "^8.32.1",
+    "@typescript-eslint/parser": "^8.32.1",
+    "eslint": "^9.36.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-import-resolver-typescript": "^4.3.4",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.4.0",
+    "globals": "^16.4.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.44.0"
+  }
+}

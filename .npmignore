@@ -1,0 +1,6 @@
+// .npmignore
+src/*
+.prettierignore
+.prettierrc.json
+eslint.config.js
+tsconfig.json

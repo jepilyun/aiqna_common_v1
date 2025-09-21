@@ -1,0 +1,10 @@
+# 빌드 결과물
+dist/
+
+# Node.js 모듈
+node_modules/
+
+# 환경 설정 파일
+.npmignore
+.prettierrc.json
+eslint.config.js
