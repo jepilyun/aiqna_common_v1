@@ -4,7 +4,7 @@ export declare const SQL_DB_TABLE: {
     map_country_languages: string;
     youtube_video_processing_logs: string;
     youtube_videos: string;
-    youtube_transcripts: string;
+    youtube_video_transcripts: string;
     pinecone_processing_logs: string;
     users: string;
     admins: string;

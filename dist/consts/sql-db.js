@@ -6,7 +6,7 @@ export const SQL_DB_TABLE = {
     // YouTube 관련
     youtube_video_processing_logs: "youtube_video_processing_logs",
     youtube_videos: "youtube_videos",
-    youtube_transcripts: "youtube_transcripts",
+    youtube_video_transcripts: "youtube_video_transcripts",
     pinecone_processing_logs: "pinecone_processing_logs",
     // 관리자 및 사용자
     users: "users",
