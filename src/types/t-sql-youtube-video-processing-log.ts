@@ -1,7 +1,7 @@
 /*
  * DB 컬럼 목록 For Youtube Video Processing Log
  */
-export type TYoutubeVideoProcessingLog = {
+export type TSqlYoutubeVideoProcessingLog = {
   id: string;
   video_id: string;
   processing_status: string;
@@ -20,15 +20,15 @@ export type TYoutubeVideoProcessingLog = {
 /*
  * DB 컬럼 목록 For Youtube Video Processing Log
  */
-export type TYoutubeVideoProcessingLogInsert = {
+export type TSqlYoutubeVideoProcessingLogInsert = {
   video_id: string;
   processing_status: string;
-} & Partial<Omit<TYoutubeVideoProcessingLog, "video_id" | "processing_status">>;
+} & Partial<Omit<TSqlYoutubeVideoProcessingLog, "video_id" | "processing_status">>;
 
 /*
  * DB 컬럼 목록 For Youtube Video Processing Log
  */
-export type TYoutubeVideoProcessingLogUpdate = {
+export type TSqlYoutubeVideoProcessingLogUpdate = {
   video_id: string;
-} & Partial<Omit<TYoutubeVideoProcessingLog, "video_id">>;
+} & Partial<Omit<TSqlYoutubeVideoProcessingLog, "video_id">>;
 

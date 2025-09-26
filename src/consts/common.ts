@@ -33,3 +33,20 @@ export const DEFAULT_VALUES = {
   not_selected: "NOT_SELECTED",
   AA_category: "AA",
 };
+
+
+export type TProcessingStatus =
+  | "pending"
+  | "processing"
+  | "completed"
+  | "failed";
+
+export type TSupportedLanguage =
+  | "ko"
+  | "en"
+  | "ja"
+  | "zh-hans"
+  | "zh-hant"
+  | "es"
+  | "fr"
+  | "de";

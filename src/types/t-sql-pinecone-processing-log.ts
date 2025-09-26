@@ -1,7 +1,7 @@
 /*
  * DB 컬럼 목록 For Pinecone Processing Log
  */
-export type TPineconeProcessingLog = {
+export type TSqlPineconeProcessingLog = {
   id: string;
   video_id: string;
   index_name: string;
@@ -17,16 +17,16 @@ export type TPineconeProcessingLog = {
 /*
  * DB 컬럼 목록 For Pinecone Processing Log
  */
-export type TPineconeProcessingLogInsert = {
+export type TSqlPineconeProcessingLogInsert = {
   video_id: string;
   index_name: string;
   processing_status: string;
-} & Partial<Omit<TPineconeProcessingLog, "video_id" | "index_name" | "processing_status">>;
+} & Partial<Omit<TSqlPineconeProcessingLog, "video_id" | "index_name" | "processing_status">>;
 
 /*
  * DB 컬럼 목록 For Pinecone Processing Log
  */
-export type TPineconeProcessingLogUpdate = {
+export type TSqlPineconeProcessingLogUpdate = {
   video_id: string;
-} & Partial<Omit<TPineconeProcessingLog, "video_id">>;
+} & Partial<Omit<TSqlPineconeProcessingLog, "video_id">>;
 

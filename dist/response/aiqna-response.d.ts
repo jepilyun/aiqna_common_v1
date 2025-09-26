@@ -1,7 +1,6 @@
 export type ResponseDBSelect<T> = {
     data: T;
     count?: number;
-    apiUrl?: string | null;
 };
 type ResponseListBase = {
     start: number;

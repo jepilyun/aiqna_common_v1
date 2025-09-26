@@ -1,7 +1,7 @@
 /*
  * DB 컬럼 목록 For Youtube Video
  */
-export type TYoutubeVideoList = {
+export type TSqlYoutubeVideoList = {
   id: string;
   video_id: string;
   etag: string;
@@ -25,7 +25,7 @@ export type TYoutubeVideoList = {
 /*
  * DB 컬럼 목록 For Youtube Video
  */
-export type TYoutubeVideoDetail = TYoutubeVideoList & {
+export type TSqlYoutubeVideoDetail = TSqlYoutubeVideoList & {
   description: string | null;
   channel_url: string | null;
   category_id: string | null;
@@ -79,26 +79,26 @@ export type TYoutubeVideoDetail = TYoutubeVideoList & {
 /*
  * DB 컬럼 목록 For Youtube Video Insert
  */
-export type TYoutubeVideoDetailInsert = {
+export type TSqlYoutubeVideoDetailInsert = {
   video_id: string;
   etag: string;
   kind: string;
   title: string;
-} & Partial<Omit<TYoutubeVideoDetail, "video_id" | "etag" | "kind" | "title">>;
+} & Partial<Omit<TSqlYoutubeVideoDetail, "video_id" | "etag" | "kind" | "title">>;
 
 /*
  * DB 컬럼 목록 For Youtube Video Update
  */
-export type TYoutubeVideoDetailUpdate = {
+export type TSqlYoutubeVideoDetailUpdate = {
   video_id: string;
-} & Partial<Omit<TYoutubeVideoDetail, "video_id">>;
+} & Partial<Omit<TSqlYoutubeVideoDetail, "video_id">>;
 
 
 
 /*
  * DB 컬럼 목록 For Youtube Video List
  */
-export const DB_COLUMNS_YOUTUBE_VIDEO_LIST = [
+export const SQL_DB_COLUMNS_YOUTUBE_VIDEO_LIST = [
   "video_id",
   "etag",
   "kind",
@@ -121,8 +121,8 @@ export const DB_COLUMNS_YOUTUBE_VIDEO_LIST = [
 /*
  * DB 컬럼 목록 For Youtube Video Detail
  */
-export const DB_COLUMNS_YOUTUBE_VIDEO_DETAIL = [
-  ...DB_COLUMNS_YOUTUBE_VIDEO_LIST,
+export const SQL_DB_COLUMNS_YOUTUBE_VIDEO_DETAIL = [
+  ...SQL_DB_COLUMNS_YOUTUBE_VIDEO_LIST,
   "description",
   "channel_url",
   "category_id",

@@ -31,3 +31,5 @@ export declare const DEFAULT_VALUES: {
     not_selected: string;
     AA_category: string;
 };
+export type TProcessingStatus = "pending" | "processing" | "completed" | "failed";
+export type TSupportedLanguage = "ko" | "en" | "ja" | "zh-hans" | "zh-hant" | "es" | "fr" | "de";

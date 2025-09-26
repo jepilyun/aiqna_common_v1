@@ -1,7 +1,7 @@
 /*
  * DB 컬럼 목록 For Youtube Video Processing Log
  */
-export type TYoutubeVideoTranscript = {
+export type TSqlYoutubeVideoTranscript = {
   id: string;
   video_id: string;
   language: string;
@@ -16,14 +16,14 @@ export type TYoutubeVideoTranscript = {
 /*
  * DB 컬럼 목록 For Youtube Video Transcript
  */
-export type TYoutubeVideoTranscriptInsert = {
+export type TSqlYoutubeVideoTranscriptInsert = {
   video_id: string;
   language: string;
-} & Partial<Omit<TYoutubeVideoTranscript, "video_id" | "language">>;
+} & Partial<Omit<TSqlYoutubeVideoTranscript, "video_id" | "language">>;
 
 /*
  * DB 컬럼 목록 For Youtube Video Transcript
  */
-export type TYoutubeVideoTranscriptUpdate = {
+export type TSqlYoutubeVideoTranscriptUpdate = {
   video_id: string;
-} & Partial<Omit<TYoutubeVideoTranscript, "video_id">>;
+} & Partial<Omit<TSqlYoutubeVideoTranscript, "video_id">>;
