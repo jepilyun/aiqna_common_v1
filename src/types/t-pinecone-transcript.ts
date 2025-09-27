@@ -18,9 +18,9 @@ export type TPineconeVideoMetadata = {
   channel_id?: string;
   published_at?: string;
   thumbnail_url?: string;
-  duration?: string;
-  view_count?: string;
-  like_count?: string;
+  duration?: number;
+  view_count?: number;
+  like_count?: number;
 }
 
 export type TPineconeChunkMetadata = TPineconeVideoMetadata & {
