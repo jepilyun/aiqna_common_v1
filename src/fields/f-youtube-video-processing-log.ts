@@ -70,6 +70,13 @@ export const F_YOUTUBE_VIDEO_PROCESSING_LOG = {
     max_length: 100,
     placeholder: "ex. Default value is now",
   },
+  retry_count: {
+    id: "retry_count",
+    label: "Retry Count",
+    is_required: false,
+    placeholder: "ex. 0",
+    default_value: 0,
+  },
   created_at: {
     id: "created_at",
     label: "Created At",

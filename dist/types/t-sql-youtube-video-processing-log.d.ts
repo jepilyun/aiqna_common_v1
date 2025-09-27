@@ -9,6 +9,7 @@ export type TSqlYoutubeVideoProcessingLog = {
     is_pinecone_processed: boolean;
     processing_started: string | null;
     processing_completed: string | null;
+    retry_count: number;
     created_at: string;
     updated_at: string;
     last_processed_at: string | null;
