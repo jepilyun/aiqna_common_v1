@@ -33,7 +33,7 @@ export type TPineconeChunkMetadata = TPineconeVideoMetadata & {
 /**
  * Pinecone 벡터 전체 구조
  */
-export type TPinconeTranscriptVector = {
+export type TPineconeTranscriptVector = {
     id: string;
     values: number[];
     metadata: TPineconeChunkMetadata;

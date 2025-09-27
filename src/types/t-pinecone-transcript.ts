@@ -38,7 +38,7 @@ export type TPineconeChunkMetadata = TPineconeVideoMetadata & {
 /**
  * Pinecone 벡터 전체 구조
  */
-export type TPinconeTranscriptVector = {
+export type TPineconeTranscriptVector = {
   id: string;                    // chunk_id
   values: number[];              // 임베딩 벡터 (보통 1536차원)
   metadata: TPineconeChunkMetadata;
