@@ -18,7 +18,7 @@ export type TPineconeVideoMetadata = {
   channel_id?: string;
   published_at?: string;
   thumbnail_url?: string;
-  duration?: number;
+  duration?: string;  // PT1M30S
   view_count?: number;
   like_count?: number;
 }
