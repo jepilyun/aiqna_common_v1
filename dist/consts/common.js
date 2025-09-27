@@ -31,4 +31,44 @@ export const DEFAULT_VALUES = {
     not_selected: "NOT_SELECTED",
     AA_category: "AA",
 };
+export const PINECONE_INDEX_NAME = {
+    YOUTUBE_TRANSCRIPT_TRAVEL_SEOUL: {
+        OPENAI_SMALL: "youtube-transcript-travel-seoul-openai-small",
+        COHERE_MULTI: "youtube-transcript-travel-seoul-cohere-multi",
+        VOYAGE_LARGE_2: "youtube-transcript-travel-seoul-voyage-large-2",
+        HF_KOREAN: "youtube-transcript-travel-seoul-hf-korean",
+    },
+    YOUTUBE_TRANSCRIPT_TRAVEL_BUSAN: {
+        OPENAI_SMALL: "youtube-transcript-travel-busan-openai-small",
+        COHERE_MULTI: "youtube-transcript-travel-busan-cohere-multi",
+        VOYAGE_LARGE_2: "youtube-transcript-travel-busan-voyage-large-2",
+        HF_KOREAN: "youtube-transcript-travel-busan-hf-korean",
+    },
+    YOUTUBE_TRANSCRIPT_TRAVEL_JEJU: {
+        OPENAI_SMALL: "youtube-transcript-travel-jeju-openai-small",
+        COHERE_MULTI: "youtube-transcript-travel-jeju-cohere-multi",
+        VOYAGE_LARGE_2: "youtube-transcript-travel-jeju-voyage-large-2",
+        HF_KOREAN: "youtube-transcript-travel-jeju-hf-korean",
+    },
+};
+export const EMBEDDING_MODEL = {
+    OPENAI: {
+        SMALL: "text-embedding-3-small",
+        MEDIUM: "text-embedding-3-medium",
+        LARGE: "text-embedding-3-large",
+    },
+    COHERE: {
+        MULTI: "embed-multilingual-v3.0",
+    },
+    VOYAGE: {
+        LARGE_2: "voyage-large-2",
+    },
+    HUGGINGFACE: {
+        KO_SROBERTA_MULTITASK: "jhgan/ko-sroberta-multitask",
+    },
+    GEMINI: {
+        BASE: "text-embedding-004",
+        LARGE: "text-embedding-004-large",
+    },
+};
 //# sourceMappingURL=common.js.map
