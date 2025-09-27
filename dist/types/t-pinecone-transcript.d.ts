@@ -1,21 +1,34 @@
-/**
- * Pinecone 비디오 메타데이터 타입
- */
-export type TPinconeVideoMetadata = {
-    video_id: string;
-    video_title: string;
-    channel_name: string;
+export type TPineconeTranscriptSegment = {
     text: string;
-    text_length: number;
-    start_time: number;
-    end_time: number;
+    start: number;
     duration: number;
+};
+export type TPineconeTranscriptData = {
+    videoId: string;
+    language: string;
+    segments: TPineconeTranscriptSegment[];
+};
+export type TPineconeVideoMetadata = {
+    video_id: string;
+    title: string;
+    channel_title?: string;
+    channel_id?: string;
+    published_at?: string;
+    thumbnail_url?: string;
+    duration?: string;
+    view_count?: string;
+    like_count?: string;
+};
+export type TPineconeChunkMetadata = TPineconeVideoMetadata & {
+    language: string;
     chunk_index: number;
     chunk_id: string;
-    category?: string;
-    language: string;
-    created_at: string;
+    start_time: number;
+    end_time: number;
+    text: string;
+    text_length: number;
     embedding_model: string;
+    created_at: string;
 };
 /**
  * Pinecone 벡터 전체 구조
@@ -23,5 +36,5 @@ export type TPinconeVideoMetadata = {
 export type TPinconeTranscriptVector = {
     id: string;
     values: number[];
-    metadata: TPinconeVideoMetadata;
+    metadata: TPineconeChunkMetadata;
 };
