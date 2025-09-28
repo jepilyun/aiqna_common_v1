@@ -2,7 +2,8 @@
  * 리스트 조회 기본 제한 개수
  */
 export const LIST_LIMIT = {
-  default: 50,
+  start: 0,
+  default: 36,
   n30: 30,
   n50: 50,
   n100: 100,

@@ -2,6 +2,7 @@
  * 리스트 조회 기본 제한 개수
  */
 export declare const LIST_LIMIT: {
+    start: number;
     default: number;
     n30: number;
     n50: number;
