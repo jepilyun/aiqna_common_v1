@@ -6,7 +6,7 @@
  * { text: "Hello world" }
  * { text: "안녕하세요" }
  */
-type TYouTubeTranscriptTextUnit = {
+export type TYouTubeTranscriptTextUnit = {
     text: string;
 };
 /**
@@ -161,4 +161,3 @@ export type TYouTubeTranscriptCueGroupSegment = {
  * };
  */
 export type TYouTubeTranscriptAnySegment = TYouTubeTranscriptSegment | TYouTubeTranscriptCueGroupSegment | TYouTubeTranscriptGenericSegment;
-export {};

@@ -6,7 +6,7 @@
  * { text: "Hello world" }
  * { text: "안녕하세요" }
  */
-type TYouTubeTranscriptTextUnit = {
+export type TYouTubeTranscriptTextUnit = {
   text: string;
 };
 
