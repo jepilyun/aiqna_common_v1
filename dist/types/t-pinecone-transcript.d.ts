@@ -41,6 +41,10 @@ export type TPineconeYouTubeTranscriptMetadata = TPineconeYouTubeVideoMetadata &
     text: string;
     text_length: number;
     embedding_model: string;
+    categories?: string[];
+    keywords?: string[];
+    locations?: string[];
+    names?: string[];
     created_at: string;
 };
 /**

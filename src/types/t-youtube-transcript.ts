@@ -59,6 +59,22 @@ export type TYouTubeTranscriptSegmentRenderer = {
 };
 
 /**
+ * 트랜스크립트 세그먼트 타입 (transcript_segment_renderer를 포함)
+ * 
+ * @example
+ * {
+ *   transcript_segment_renderer: {
+ *     snippet: { text: "오늘의 주제는" },
+ *     start_ms: "15000",
+ *     end_ms: "17000"
+ *   }
+ * }
+ */
+export type TYouTubeTranscriptSegment = {
+  transcript_segment_renderer: TYouTubeTranscriptSegmentRenderer;
+};
+
+/**
  * 자막 렌더러를 나타내는 인터페이스
  * 개별 자막 항목의 구조를 정의
  * 
@@ -75,41 +91,6 @@ export type TYouTubeTranscriptCueRenderer = {
   text?: TYouTubeTranscriptSnippet; // 자막 텍스트 내용
   start_offset_ms?: string; // 시작 오프셋 (밀리초)
   duration_ms?: string; // 지속 시간 (밀리초)
-};
-
-/**
- * 일반 세그먼트 인터페이스
- * 
- * @example
- * {
- *   text: "This is a simple segment",
- *   start_ms: "1000",
- *   end_ms: "3000"
- * }
- */
-export type TYouTubeTranscriptGenericSegment = {
-  text?: string | TYouTubeTranscriptSnippet;
-  runs?: TYouTubeTranscriptTextUnit[];
-  snippet?: TYouTubeTranscriptSnippet;
-  start_ms?: string;
-  end_ms?: string;
-  duration_ms?: string;
-};
-
-/**
- * 트랜스크립트 세그먼트 타입 (transcript_segment_renderer를 포함)
- * 
- * @example
- * {
- *   transcript_segment_renderer: {
- *     snippet: { text: "오늘의 주제는" },
- *     start_ms: "15000",
- *     end_ms: "17000"
- *   }
- * }
- */
-export type TYouTubeTranscriptSegment = {
-  transcript_segment_renderer: TYouTubeTranscriptSegmentRenderer;
 };
 
 /**
@@ -142,6 +123,25 @@ export type TYouTubeTranscriptCueGroupSegment = {
   cue_group_renderer: {
     cues?: { cue_renderer?: TYouTubeTranscriptCueRenderer }[];
   };
+};
+
+/**
+ * 일반 세그먼트 인터페이스
+ * 
+ * @example
+ * {
+ *   text: "This is a simple segment",
+ *   start_ms: "1000",
+ *   end_ms: "3000"
+ * }
+ */
+export type TYouTubeTranscriptGenericSegment = {
+  text?: string | TYouTubeTranscriptSnippet;
+  runs?: TYouTubeTranscriptTextUnit[];
+  snippet?: TYouTubeTranscriptSnippet;
+  start_ms?: string;
+  end_ms?: string;
+  duration_ms?: string;
 };
 
 /**
