@@ -24,23 +24,31 @@ export const COOKIE_NAME = {
  * 기본 값 목록
  */
 export const DEFAULT_VALUES = {
-  AA_country: "AA",
-  KR_country: "KR",
-  index_seoul: 2,
-  code_city_seoul: "seoul",
-  upper_category_none: "NONE",
-  language: "ko",
-  NONE: "NONE",
-  not_selected: "NOT_SELECTED",
-  AA_category: "AA",
-};
+  COUNTRY: {
+    ALL: "AA",
+    KOREA: "KR",
+  },
+  CITY: {
+    SEOUL_CODE: "seoul",
+    SEOUL_INDEX: 2,
+  },
+  CATEGORY: {
+    ALL: "AA",
+    NONE: "NONE",
+  },
+  LANGUAGE: "ko",
+  NOT_SELECTED: "NOT_SELECTED",
+} as const;
 
 
-export type TProcessingStatus =
-  | "pending"
-  | "processing"
-  | "completed"
-  | "failed";
+export const PROCESSING_STATUS = {
+  PENDING: 'pending',
+  PROCESSING: 'processing',
+  COMPLETED: 'completed',
+  FAILED: 'failed',
+} as const;
+
+export type ProcessingStatus = typeof PROCESSING_STATUS[keyof typeof PROCESSING_STATUS];
 
 export type TSupportedLanguage =
   | "ko"
@@ -99,5 +107,4 @@ export const EMBEDDING_MODEL = {
 export type EmbeddingProviderType = 'openai' | 'cohere' | 'voyage' | 'huggingface' | 'gemini';
 
 // 타입 추출 (개선된 버전)
-export type PineconeIndexName = 
-  typeof PINECONE_INDEX_NAME[keyof typeof PINECONE_INDEX_NAME][keyof typeof PINECONE_INDEX_NAME['YOUTUBE_TRANSCRIPT_TRAVEL_SEOUL']];
+export type PineconeIndexName = string; // 또는 리터럴 유니온으로 제한

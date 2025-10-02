@@ -1,4 +1,4 @@
-export const F_YOUTUBE_VIDEO_PROCESSING_LOG = {
+export const F_TEXT_PROCESSING_LOG = {
   id: {
     id: "id",
     label: "ID",
@@ -6,12 +6,12 @@ export const F_YOUTUBE_VIDEO_PROCESSING_LOG = {
     max_length: 36,
     placeholder: "ex. 123e4567-e89b-12d3-a456-426614174000",
   },
-  video_id: {
-    id: "video_id",
-    label: "Video ID",
+  hash_key: {
+    id: "hash_key",
+    label: "Hash Key",
     is_required: true,
-    max_length: 20,
-    placeholder: "ex. video_123",
+    max_length: 36,
+    placeholder: "ex. 123e4567-e89b-12d3-a456-426614174000",
   },
   processing_status: {
     id: "name",
@@ -34,20 +34,6 @@ export const F_YOUTUBE_VIDEO_PROCESSING_LOG = {
     is_required: true,
     max_length: 255,
     placeholder: "PK ex. food_restaurants_index",
-  },
-  is_api_data_fetched: {
-    id: "is_api_data_fetched",
-    label: "Is API Data Fetched",
-    is_required: true,
-    placeholder: "ex. false",
-    default_value: false,
-  },
-  is_transcript_fetched: {
-    id: "is_transcript_fetched",
-    label: "Is Transcript Fetched",
-    is_required: true,
-    placeholder: "ex. false",
-    default_value: false,
   },
   is_pinecone_processed: {
     id: "is_pinecone_processed",

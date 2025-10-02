@@ -4,8 +4,6 @@
 export type TSqlYoutubeVideoList = {
   id: string;
   video_id: string;
-  etag: string;
-  kind: string;
   title: string;
   published_date: string | null;
   channel_id: string | null;
@@ -16,9 +14,12 @@ export type TSqlYoutubeVideoList = {
   like_count: number;
   favorite_count: number;
   comment_count: number;
+  duration_seconds: number;
   created_at: string;
   updated_at: string;
   last_processed_at: string | null;
+  is_active: boolean;
+  is_deleted: boolean;
 };
 
 
@@ -26,6 +27,8 @@ export type TSqlYoutubeVideoList = {
  * DB 컬럼 목록 For Youtube Video
  */
 export type TSqlYoutubeVideoDetail = TSqlYoutubeVideoList & {
+  etag: string;
+  kind: string;
   description: string | null;
   channel_url: string | null;
   category_id: string | null;
@@ -34,7 +37,6 @@ export type TSqlYoutubeVideoDetail = TSqlYoutubeVideoList & {
   live_broadcast_content: string;
   tags: string[] | string | null;
   duration_text: string | null;
-  duration_seconds: number;
   dimension: string | null;
   definition: string | null;
   caption: string;
@@ -73,6 +75,8 @@ export type TSqlYoutubeVideoDetail = TSqlYoutubeVideoList & {
   is_private: string;
   age_restricted: string;
   family_safe: string;
+  metadata_json: string | null;
+  deleted_at: string | null;
 };
 
 
@@ -81,17 +85,15 @@ export type TSqlYoutubeVideoDetail = TSqlYoutubeVideoList & {
  */
 export type TSqlYoutubeVideoDetailInsert = {
   video_id: string;
-  etag: string;
-  kind: string;
-  title: string;
-} & Partial<Omit<TSqlYoutubeVideoDetail, "video_id" | "etag" | "kind" | "title">>;
+} & Partial<Omit<TSqlYoutubeVideoDetail, "video_id">>;
 
 /*
  * DB 컬럼 목록 For Youtube Video Update
  */
 export type TSqlYoutubeVideoDetailUpdate = {
-  video_id: string;
-} & Partial<Omit<TSqlYoutubeVideoDetail, "video_id">>;
+  id?: string;
+  video_id?: string;
+} & Partial<Omit<TSqlYoutubeVideoDetail, "id" | "video_id">>;
 
 
 
@@ -100,8 +102,6 @@ export type TSqlYoutubeVideoDetailUpdate = {
  */
 export const SQL_DB_COLUMNS_YOUTUBE_VIDEO_LIST = [
   "video_id",
-  "etag",
-  "kind",
   "title",
   "published_date",
   "channel_id",
@@ -112,9 +112,12 @@ export const SQL_DB_COLUMNS_YOUTUBE_VIDEO_LIST = [
   "like_count",
   "favorite_count",
   "comment_count",
+  "duration_seconds",
   "created_at",
   "updated_at",
   "last_processed_at",
+  "is_active",
+  "is_deleted",
 ];
 
 
@@ -123,6 +126,8 @@ export const SQL_DB_COLUMNS_YOUTUBE_VIDEO_LIST = [
  */
 export const SQL_DB_COLUMNS_YOUTUBE_VIDEO_DETAIL = [
   ...SQL_DB_COLUMNS_YOUTUBE_VIDEO_LIST,
+  "etag",
+  "kind",
   "description",
   "channel_url",
   "category_id",
@@ -170,5 +175,7 @@ export const SQL_DB_COLUMNS_YOUTUBE_VIDEO_DETAIL = [
   "is_private",
   "age_restricted",
   "family_safe",
+  "metadata_json",
+  "deleted_at",
 ];
 

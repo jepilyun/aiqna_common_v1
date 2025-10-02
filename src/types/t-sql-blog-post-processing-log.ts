@@ -1,14 +1,13 @@
 /*
- * DB 컬럼 목록 For Youtube Video Processing Log
+ * DB 컬럼 목록 For Blog Post Processing Log
  */
-export type TSqlYoutubeVideoProcessingLog = {
+export type TSqlBlogPostProcessingLog = {
   id: string;
-  video_id: string;
+  blog_post_url: string;
   processing_status: string;
   error_message: string | null;
   index_name: string;
-  is_api_data_fetched: boolean;
-  is_transcript_fetched: boolean;
+  is_data_fetched: boolean;
   is_pinecone_processed: boolean;
   processing_started: string | null;
   processing_completed: string | null;
@@ -24,15 +23,15 @@ export type TSqlYoutubeVideoProcessingLog = {
 /*
  * DB 컬럼 목록 For Youtube Video Processing Log
  */
-export type TSqlYoutubeVideoProcessingLogInsert = {
-  video_id: string;
-} & Partial<Omit<TSqlYoutubeVideoProcessingLog, "video_id">>;
+export type TSqlBlogPostProcessingLogInsert = {
+  blog_post_url: string;
+} & Partial<Omit<TSqlBlogPostProcessingLog, "blog_post_url">>;
 
 /*
  * DB 컬럼 목록 For Youtube Video Processing Log
  */
-export type TSqlYoutubeVideoProcessingLogUpdate = {
+export type TSqlBlogPostProcessingLogUpdate = {
   id?: string;
-  video_id?: string;
-} & Partial<Omit<TSqlYoutubeVideoProcessingLog, "id" | "video_id">>;
+  blog_post_url?: string;
+} & Partial<Omit<TSqlBlogPostProcessingLog, "id" | "blog_post_url">>;
 
