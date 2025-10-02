@@ -98,4 +98,26 @@ export declare const F_YOUTUBE_VIDEO_PROCESSING_LOG: {
         max_length: number;
         placeholder: string;
     };
+    source: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+    };
+    priority: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+        default_value: number;
+    };
+    assigned_worker: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+    };
 };

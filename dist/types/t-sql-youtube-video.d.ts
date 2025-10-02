@@ -1,8 +1,6 @@
 export type TSqlYoutubeVideoList = {
     id: string;
     video_id: string;
-    etag: string;
-    kind: string;
     title: string;
     published_date: string | null;
     channel_id: string | null;
@@ -13,11 +11,16 @@ export type TSqlYoutubeVideoList = {
     like_count: number;
     favorite_count: number;
     comment_count: number;
+    duration_seconds: number;
     created_at: string;
     updated_at: string;
     last_processed_at: string | null;
+    is_active: boolean;
+    is_deleted: boolean;
 };
 export type TSqlYoutubeVideoDetail = TSqlYoutubeVideoList & {
+    etag: string;
+    kind: string;
     description: string | null;
     channel_url: string | null;
     category_id: string | null;
@@ -26,7 +29,6 @@ export type TSqlYoutubeVideoDetail = TSqlYoutubeVideoList & {
     live_broadcast_content: string;
     tags: string[] | string | null;
     duration_text: string | null;
-    duration_seconds: number;
     dimension: string | null;
     definition: string | null;
     caption: string;
@@ -65,15 +67,15 @@ export type TSqlYoutubeVideoDetail = TSqlYoutubeVideoList & {
     is_private: string;
     age_restricted: string;
     family_safe: string;
+    metadata_json: string | null;
+    deleted_at: string | null;
 };
 export type TSqlYoutubeVideoDetailInsert = {
     video_id: string;
-    etag: string;
-    kind: string;
-    title: string;
-} & Partial<Omit<TSqlYoutubeVideoDetail, "video_id" | "etag" | "kind" | "title">>;
-export type TSqlYoutubeVideoDetailUpdate = {
-    video_id: string;
 } & Partial<Omit<TSqlYoutubeVideoDetail, "video_id">>;
+export type TSqlYoutubeVideoDetailUpdate = {
+    id?: string;
+    video_id?: string;
+} & Partial<Omit<TSqlYoutubeVideoDetail, "id" | "video_id">>;
 export declare const SQL_DB_COLUMNS_YOUTUBE_VIDEO_LIST: string[];
 export declare const SQL_DB_COLUMNS_YOUTUBE_VIDEO_DETAIL: string[];

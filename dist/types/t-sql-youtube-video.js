@@ -3,8 +3,6 @@
  */
 export const SQL_DB_COLUMNS_YOUTUBE_VIDEO_LIST = [
     "video_id",
-    "etag",
-    "kind",
     "title",
     "published_date",
     "channel_id",
@@ -15,15 +13,20 @@ export const SQL_DB_COLUMNS_YOUTUBE_VIDEO_LIST = [
     "like_count",
     "favorite_count",
     "comment_count",
+    "duration_seconds",
     "created_at",
     "updated_at",
     "last_processed_at",
+    "is_active",
+    "is_deleted",
 ];
 /*
  * DB 컬럼 목록 For Youtube Video Detail
  */
 export const SQL_DB_COLUMNS_YOUTUBE_VIDEO_DETAIL = [
     ...SQL_DB_COLUMNS_YOUTUBE_VIDEO_LIST,
+    "etag",
+    "kind",
     "description",
     "channel_url",
     "category_id",
@@ -71,5 +74,7 @@ export const SQL_DB_COLUMNS_YOUTUBE_VIDEO_DETAIL = [
     "is_private",
     "age_restricted",
     "family_safe",
+    "metadata_json",
+    "deleted_at",
 ];
 //# sourceMappingURL=t-sql-youtube-video.js.map

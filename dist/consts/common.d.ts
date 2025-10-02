@@ -22,17 +22,28 @@ export declare const COOKIE_NAME: {
  * 기본 값 목록
  */
 export declare const DEFAULT_VALUES: {
-    AA_country: string;
-    KR_country: string;
-    index_seoul: number;
-    code_city_seoul: string;
-    upper_category_none: string;
-    language: string;
-    NONE: string;
-    not_selected: string;
-    AA_category: string;
+    readonly COUNTRY: {
+        readonly ALL: "AA";
+        readonly KOREA: "KR";
+    };
+    readonly CITY: {
+        readonly SEOUL_CODE: "seoul";
+        readonly SEOUL_INDEX: 2;
+    };
+    readonly CATEGORY: {
+        readonly ALL: "AA";
+        readonly NONE: "NONE";
+    };
+    readonly LANGUAGE: "ko";
+    readonly NOT_SELECTED: "NOT_SELECTED";
 };
-export type TProcessingStatus = "pending" | "processing" | "completed" | "failed";
+export declare const PROCESSING_STATUS: {
+    readonly PENDING: "pending";
+    readonly PROCESSING: "processing";
+    readonly COMPLETED: "completed";
+    readonly FAILED: "failed";
+};
+export type ProcessingStatus = typeof PROCESSING_STATUS[keyof typeof PROCESSING_STATUS];
 export type TSupportedLanguage = "ko" | "en" | "ja" | "zh-hans" | "zh-hant" | "es" | "fr" | "de";
 export declare const PINECONE_INDEX_NAME: {
     readonly YOUTUBE_TRANSCRIPT_TRAVEL_SEOUL: {
@@ -75,4 +86,4 @@ export declare const EMBEDDING_MODEL: {
     };
 };
 export type EmbeddingProviderType = 'openai' | 'cohere' | 'voyage' | 'huggingface' | 'gemini';
-export type PineconeIndexName = typeof PINECONE_INDEX_NAME[keyof typeof PINECONE_INDEX_NAME][keyof typeof PINECONE_INDEX_NAME['YOUTUBE_TRANSCRIPT_TRAVEL_SEOUL']];
+export type PineconeIndexName = string;

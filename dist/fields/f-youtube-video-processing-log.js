@@ -32,7 +32,7 @@ export const F_YOUTUBE_VIDEO_PROCESSING_LOG = {
         id: "index_name",
         label: "Pinecone Index Name",
         is_required: true,
-        max_length: 100,
+        max_length: 255,
         placeholder: "PK ex. food_restaurants_index",
     },
     is_api_data_fetched: {
@@ -97,6 +97,28 @@ export const F_YOUTUBE_VIDEO_PROCESSING_LOG = {
         is_required: false,
         max_length: 100,
         placeholder: "ex. Default value is now",
+    },
+    source: {
+        id: "source",
+        label: "Source",
+        is_required: true,
+        max_length: 50,
+        placeholder: "ex. youtube",
+    },
+    priority: {
+        id: "priority",
+        label: "Priority",
+        is_required: true,
+        max_length: 50,
+        placeholder: "ex. 1, 2, 3, ...",
+        default_value: 5,
+    },
+    assigned_worker: {
+        id: "assigned_worker",
+        label: "Assigned Worker",
+        is_required: false,
+        max_length: 100,
+        placeholder: "ex. worker_1, worker_2, etc.",
     },
 };
 //# sourceMappingURL=f-youtube-video-processing-log.js.map

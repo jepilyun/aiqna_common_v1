@@ -482,4 +482,35 @@ export declare const F_YOUTUBE_VIDEO: {
         max_length: number;
         placeholder: string;
     };
+    metadata_json: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+        default_value: string;
+    };
+    is_active: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+        default_value: string;
+    };
+    is_deleted: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+        default_value: string;
+    };
+    deleted_at: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+    };
 };

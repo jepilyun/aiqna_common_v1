@@ -13,11 +13,14 @@ export type TSqlYoutubeVideoProcessingLog = {
     created_at: string;
     updated_at: string;
     last_processed_at: string | null;
+    source: string | null;
+    priority: number;
+    assigned_worker: string | null;
 };
 export type TSqlYoutubeVideoProcessingLogInsert = {
     video_id: string;
-    processing_status: string;
-} & Partial<Omit<TSqlYoutubeVideoProcessingLog, "video_id" | "processing_status">>;
-export type TSqlYoutubeVideoProcessingLogUpdate = {
-    video_id: string;
 } & Partial<Omit<TSqlYoutubeVideoProcessingLog, "video_id">>;
+export type TSqlYoutubeVideoProcessingLogUpdate = {
+    id?: string;
+    video_id?: string;
+} & Partial<Omit<TSqlYoutubeVideoProcessingLog, "id" | "video_id">>;
