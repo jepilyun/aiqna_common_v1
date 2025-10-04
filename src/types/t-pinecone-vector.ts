@@ -1,5 +1,5 @@
 // Pinecone 메타데이터 타입 정의
-export type TPineconeMetadata = Record<string, string | number | boolean | string[] | null>;
+export type TPineconeMetadata = Record<string, string | number | boolean | string[]>;
 
 /**
  * Pinecone 벡터 타입

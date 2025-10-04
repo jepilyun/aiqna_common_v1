@@ -1,4 +1,4 @@
-export type TPineconeMetadata = Record<string, string | number | boolean | string[] | null>;
+export type TPineconeMetadata = Record<string, string | number | boolean | string[]>;
 /**
  * Pinecone 벡터 타입
  */
