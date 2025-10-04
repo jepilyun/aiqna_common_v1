@@ -12,14 +12,13 @@ export type TSqlInstagramPostProcessingLog = {
     created_at: string;
     updated_at: string;
     last_processed_at: string | null;
-    source: string | null;
+    source?: string | null;
     priority: number;
     assigned_worker: string | null;
 };
-export type TSqlInstagramPostProcessingLogInsert = {
-    instagram_post_url: string;
-} & Partial<Omit<TSqlInstagramPostProcessingLog, "instagram_post_url">>;
-export type TSqlInstagramPostProcessingLogUpdate = {
+export type TSqlInstagramPostProcessingLogInsert = Omit<TSqlInstagramPostProcessingLog, 'id' | 'created_at' | 'updated_at'> & {
     id?: string;
-    instagram_post_url?: string;
-} & Partial<Omit<TSqlInstagramPostProcessingLog, "id" | "instagram_post_url">>;
+    created_at?: string;
+    updated_at?: string;
+};
+export type TSqlInstagramPostProcessingLogUpdate = Partial<Omit<TSqlInstagramPostProcessingLog, 'id' | 'created_at'>>;

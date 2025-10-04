@@ -15,7 +15,7 @@ export type TSqlInstagramPostProcessingLog = {
   created_at: string;
   updated_at: string;
   last_processed_at: string | null;
-  source: string | null;
+  source?: string | null;
   priority: number;
   assigned_worker: string | null;
 };
@@ -23,15 +23,19 @@ export type TSqlInstagramPostProcessingLog = {
 /*
  * DB 컬럼 목록 For Youtube Video Processing Log
  */
-export type TSqlInstagramPostProcessingLogInsert = {
-  instagram_post_url: string;
-} & Partial<Omit<TSqlInstagramPostProcessingLog, "instagram_post_url">>;
+export type TSqlInstagramPostProcessingLogInsert = Omit<
+  TSqlInstagramPostProcessingLog,
+  'id' | 'created_at' | 'updated_at'
+> & {
+  id?: string;
+  created_at?: string;
+  updated_at?: string;
+};
 
 /*
  * DB 컬럼 목록 For Youtube Video Processing Log
  */
-export type TSqlInstagramPostProcessingLogUpdate = {
-  id?: string;
-  instagram_post_url?: string;
-} & Partial<Omit<TSqlInstagramPostProcessingLog, "id" | "instagram_post_url">>;
-
+// Update 타입
+export type TSqlInstagramPostProcessingLogUpdate = Partial<
+  Omit<TSqlInstagramPostProcessingLog, 'id' | 'created_at'>
+>;

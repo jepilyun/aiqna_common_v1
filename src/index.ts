@@ -26,7 +26,6 @@ export * from "./types/t-api-youtube-error.js";
 export * from "./types/t-api-youtube-search-result.js";
 export * from "./types/t-api-youtube-video.js";
 export * from "./types/t-i18n.js";
-export * from "./types/t-pinecone-metadata.js";
 export * from "./types/t-pinecone-transcript.js";
 export * from "./types/t-pinecone-vector.js";
 export * from "./types/t-sql-blog-post-processing-log.js";
