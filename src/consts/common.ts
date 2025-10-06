@@ -108,3 +108,24 @@ export type EmbeddingProviderType = 'openai' | 'cohere' | 'voyage' | 'huggingfac
 
 // 타입 추출 (개선된 버전)
 export type PineconeIndexName = string; // 또는 리터럴 유니온으로 제한
+
+
+/**
+ * Request Create Content Type Enum
+ */
+export enum ERequestCreateContentType {
+  YoutubeVideo = "youtubeVideo",
+  Instagram = "instagram",
+  Blog = "blog",
+  Text = "text",
+}
+
+/**
+ * Request Processing Status Enum
+ */
+export enum EProcessingStatusType {
+  pending = "pending", 
+  processing = "processing", 
+  completed = "completed", 
+  failed = "failed"
+}
