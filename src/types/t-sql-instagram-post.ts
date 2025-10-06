@@ -6,7 +6,7 @@ export type TSqlInstagramPostList = {
   instagram_post_url: string;
   post_type: string;
   media_count: number;
-  ogTitle: string | null;
+  og_title: string | null;
   like_count: number;
   comment_count: number;
   view_count: number;
@@ -27,12 +27,12 @@ export type TSqlInstagramPostList = {
  */
 export type TSqlInstagramPostDetail = TSqlInstagramPostList & {
   media_urls: string[];
-  ogDescription: string | null;
-  ogImage: string | null;
-  ogUrl: string | null;
-  ogIosUrl: string | null;
-  ogAndroidPackage: string | null;
-  ogAndroidUrl: string | null;
+  og_description: string | null;
+  og_image: string | null;
+  og_url: string | null;
+  og_ios_url: string | null;
+  og_android_package: string | null;
+  og_android_url: string | null;
   tags: string[];
   user_profile_url: string | null;
   local_image_url: string | null;
@@ -69,7 +69,7 @@ export const SQL_DB_COLUMNS_INSTAGRAM_POST_LIST = [
   "instagram_post_url",
   "post_type",
   "media_count",
-  "ogTitle",
+  "og_title",
   "like_count",
   "comment_count",
   "view_count",
@@ -91,12 +91,12 @@ export const SQL_DB_COLUMNS_INSTAGRAM_POST_LIST = [
 export const SQL_DB_COLUMNS_INSTAGRAM_POST_DETAIL = [
   ...SQL_DB_COLUMNS_INSTAGRAM_POST_LIST,
   "media_urls",
-  "ogDescription",
-  "ogImage",
-  "ogUrl",
-  "ogIosUrl",
-  "ogAndroidPackage",
-  "ogAndroidUrl",
+  "og_description",
+  "og_image",
+  "og_url",
+  "og_ios_url",
+  "og_android_package",
+  "og_android_url",
   "tags",
   "user_profile_url",
   "local_image_url",
