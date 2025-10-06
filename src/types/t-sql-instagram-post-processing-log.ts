@@ -25,11 +25,9 @@ export type TSqlInstagramPostProcessingLog = {
  */
 export type TSqlInstagramPostProcessingLogInsert = Omit<
   TSqlInstagramPostProcessingLog,
-  'id' | 'created_at' | 'updated_at'
+  'instagram_post_url'
 > & {
-  id?: string;
-  created_at?: string;
-  updated_at?: string;
+  instagram_post_url?: string;
 };
 
 /*
