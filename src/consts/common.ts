@@ -121,6 +121,30 @@ export enum ERequestCreateContentType {
 }
 
 /**
+ * Request Create Content Type (string literal type for flexibility)
+ */
+export type TRequestCreateContentType = `${ERequestCreateContentType}`;
+
+/**
+ * 
+ */
+export type TRequestCreateContentData = {
+  videoId?: string;
+  instagramUrl?: string;
+  blogUrl?: string;
+  text?: string;
+}
+
+/**
+ * Request Create Content
+ */
+export type TRequestCreateContent = {
+  type: TRequestCreateContentType;
+  data: TRequestCreateContentData;
+};
+
+
+/**
  * Request Processing Status Enum
  */
 export enum EProcessingStatusType {
