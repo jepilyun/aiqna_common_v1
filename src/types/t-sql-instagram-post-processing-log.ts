@@ -23,17 +23,14 @@ export type TSqlInstagramPostProcessingLog = {
 /*
  * DB 컬럼 목록 For Youtube Video Processing Log
  */
-export type TSqlInstagramPostProcessingLogInsert = Omit<
-  TSqlInstagramPostProcessingLog,
-  'instagram_post_url'
-> & {
-  instagram_post_url?: string;
-};
+export type TSqlInstagramPostProcessingLogInsert = {
+  instagram_post_url: string;
+} & Partial<Omit<TSqlInstagramPostProcessingLog, 'instagram_post_url'>>;
 
 /*
  * DB 컬럼 목록 For Youtube Video Processing Log
  */
 // Update 타입
 export type TSqlInstagramPostProcessingLogUpdate = Partial<
-  Omit<TSqlInstagramPostProcessingLog, 'id' | 'created_at'>
+  Omit<TSqlInstagramPostProcessingLog, 'id' | 'instagram_post_url'>
 >;

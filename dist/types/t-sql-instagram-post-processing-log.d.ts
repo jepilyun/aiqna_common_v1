@@ -16,7 +16,7 @@ export type TSqlInstagramPostProcessingLog = {
     priority: number;
     assigned_worker: string | null;
 };
-export type TSqlInstagramPostProcessingLogInsert = Omit<TSqlInstagramPostProcessingLog, 'instagram_post_url'> & {
-    instagram_post_url?: string;
-};
-export type TSqlInstagramPostProcessingLogUpdate = Partial<Omit<TSqlInstagramPostProcessingLog, 'id' | 'created_at'>>;
+export type TSqlInstagramPostProcessingLogInsert = {
+    instagram_post_url: string;
+} & Partial<Omit<TSqlInstagramPostProcessingLog, 'instagram_post_url'>>;
+export type TSqlInstagramPostProcessingLogUpdate = Partial<Omit<TSqlInstagramPostProcessingLog, 'id' | 'instagram_post_url'>>;
