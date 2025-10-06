@@ -83,4 +83,24 @@ export const EMBEDDING_MODEL = {
         LARGE: "text-embedding-004-large",
     },
 };
+/**
+ * Request Create Content Type Enum
+ */
+export var ERequestCreateContentType;
+(function (ERequestCreateContentType) {
+    ERequestCreateContentType["YoutubeVideo"] = "youtubeVideo";
+    ERequestCreateContentType["Instagram"] = "instagram";
+    ERequestCreateContentType["Blog"] = "blog";
+    ERequestCreateContentType["Text"] = "text";
+})(ERequestCreateContentType || (ERequestCreateContentType = {}));
+/**
+ * Request Processing Status Enum
+ */
+export var EProcessingStatusType;
+(function (EProcessingStatusType) {
+    EProcessingStatusType["pending"] = "pending";
+    EProcessingStatusType["processing"] = "processing";
+    EProcessingStatusType["completed"] = "completed";
+    EProcessingStatusType["failed"] = "failed";
+})(EProcessingStatusType || (EProcessingStatusType = {}));
 //# sourceMappingURL=common.js.map

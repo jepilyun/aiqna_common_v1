@@ -87,3 +87,21 @@ export declare const EMBEDDING_MODEL: {
 };
 export type EmbeddingProviderType = 'openai' | 'cohere' | 'voyage' | 'huggingface' | 'gemini';
 export type PineconeIndexName = string;
+/**
+ * Request Create Content Type Enum
+ */
+export declare enum ERequestCreateContentType {
+    YoutubeVideo = "youtubeVideo",
+    Instagram = "instagram",
+    Blog = "blog",
+    Text = "text"
+}
+/**
+ * Request Processing Status Enum
+ */
+export declare enum EProcessingStatusType {
+    pending = "pending",
+    processing = "processing",
+    completed = "completed",
+    failed = "failed"
+}
