@@ -108,6 +108,16 @@ export type TRequestCreateContentData = {
     instagramUrl?: string;
     blogUrl?: string;
     text?: string;
+    instagram_content?: string;
+    instagram_user_id?: string;
+    instagram_user_profile_url?: string;
+    instagram_post_date?: string;
+    blog_title?: string;
+    blog_content?: string;
+    blog_tags?: string[];
+    blog_platform?: string;
+    blog_platform_url?: string;
+    blog_published_date?: string;
 };
 /**
  * Request Create Content
