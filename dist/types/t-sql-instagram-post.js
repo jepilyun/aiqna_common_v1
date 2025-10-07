@@ -32,7 +32,7 @@ export const SQL_DB_COLUMNS_INSTAGRAM_POST_DETAIL = [
     "og_ios_url",
     "og_android_package",
     "og_android_url",
-    "content",
+    "description",
     "tags",
     "user_profile_url",
     "local_image_url",

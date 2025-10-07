@@ -12,7 +12,6 @@ export type TSqlBlogPostList = {
     is_deleted: boolean;
 };
 export type TSqlBlogPostDetail = TSqlBlogPostList & {
-    featured_image_url: string;
     og_title: string | null;
     og_description: string | null;
     og_image: string | null;

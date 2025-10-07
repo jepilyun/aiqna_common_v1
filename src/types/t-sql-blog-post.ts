@@ -19,7 +19,6 @@ export type TSqlBlogPostList = {
  * DB 컬럼 목록 For Youtube Video
  */
 export type TSqlBlogPostDetail = TSqlBlogPostList & {
-  featured_image_url: string;
   og_title: string | null;
   og_description: string | null;
   og_image: string | null;
@@ -72,7 +71,6 @@ export const SQL_DB_COLUMNS_BLOG_POST_LIST = [
  */
 export const SQL_DB_COLUMNS_BLOG_POST_DETAIL = [
   ...SQL_DB_COLUMNS_BLOG_POST_LIST,
-  "featured_image_url",
   "og_title",
   "og_description",
   "og_image",

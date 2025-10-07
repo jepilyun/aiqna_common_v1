@@ -129,20 +129,30 @@ export type TRequestCreateContentType = `${ERequestCreateContentType}`;
  * 
  */
 export type TRequestCreateContentData = {
-  videoId?: string;
-  instagramUrl?: string;
-  blogUrl?: string;
-  text?: string;
-  instagramContent?: string;
-  instagramUserId?: string;
-  instagramUserProfileUrl?: string;
-  instagramPostDate?: string;
-  blogTitle?: string;
-  blogContent?: string;
-  blogTags?: string[];
-  blogPlatform?: string;
-  blogPlatformUrl?: string;
-  blogPublishedDate?: string;
+  youtubeVideo?: {
+    videoId?: string;
+  },
+  instagram?: {
+    instagramPostUrl: string;
+    description: string | null;
+    tags: string[];
+    userId: string | null;
+    userProfileUrl: string | null;
+    postDate: string | null;
+  },
+  blog?: {
+    blogPostUrl: string;
+    title: string | null;
+    content: string | null;
+    tags: string[];
+    platform: string | null;
+    platformUrl: string | null;
+    publishedDate: string | null;
+  },
+  text?: {
+    content: string;
+    title: string | null;
+  },
 }
 
 /**
