@@ -50,6 +50,10 @@ export type TPineconeVectorMetadataForContent = {
   type?: string;
   id?: string;
   instagram_post_url?: string;   // Instagram 게시물 URL
+  instagram_local_image_url?: string;   // Instagram 로컬 이미지 URL
+  instagram_user_id?: string;   // Instagram 사용자 ID
+  instagram_user_profile_url?: string;   // Instagram 사용자 프로필 URL
+  instagram_post_date?: string;   // Instagram 게시 날짜 (ISO 8601 형식)
   blog_post_url?: string;   // Blog 게시물 URL
   hash_key?: string;
 }

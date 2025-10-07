@@ -46,6 +46,10 @@ export type TPineconeVectorMetadataForContent = {
     type?: string;
     id?: string;
     instagram_post_url?: string;
+    instagram_local_image_url?: string;
+    instagram_user_id?: string;
+    instagram_user_profile_url?: string;
+    instagram_post_date?: string;
     blog_post_url?: string;
     hash_key?: string;
 };
