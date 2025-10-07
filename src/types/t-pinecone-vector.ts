@@ -55,5 +55,13 @@ export type TPineconeVectorMetadataForContent = {
   instagram_user_profile_url?: string;   // Instagram 사용자 프로필 URL
   instagram_post_date?: string;   // Instagram 게시 날짜 (ISO 8601 형식)
   blog_post_url?: string;   // Blog 게시물 URL
+  blog_title?: string;   // Blog 제목
+  blog_content?: string;   // Blog 내용
+  blog_image?: string;   // Blog 이미지
+  blog_published_date?: string;   // Blog 게시 날짜 (ISO 8601 형식)
+  blog_local_image_url?: string;   // Blog 로컬 이미지 URL
+  blog_tags?: string[];   // Blog 태그
+  blog_platform?: string;   // Blog 플랫폼
+  blog_platform_url?: string;   // Blog 플랫폼 URL
   hash_key?: string;
 }
