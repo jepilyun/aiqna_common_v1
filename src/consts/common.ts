@@ -62,23 +62,23 @@ export type TSupportedLanguage =
 
 
 export const PINECONE_INDEX_NAME = {
-  YOUTUBE_TRANSCRIPT_TRAVEL_SEOUL: {
-    OPENAI_SMALL: "youtube-transcript-travel-seoul-openai-small",
-    COHERE_MULTI: "youtube-transcript-travel-seoul-cohere-multi",
-    VOYAGE_LARGE_2: "youtube-transcript-travel-seoul-voyage-large-2",
-    HF_KOREAN: "youtube-transcript-travel-seoul-hf-korean",
+  TRAVEL_SEOUL: {
+    OPENAI_SMALL: "travel-seoul-openai-small",
+    COHERE_MULTI: "travel-seoul-cohere-multi",
+    VOYAGE_LARGE_2: "travel-seoul-voyage-large-2",
+    HF_KOREAN: "travel-seoul-hf-korean",
   },
-  YOUTUBE_TRANSCRIPT_TRAVEL_BUSAN: {
-    OPENAI_SMALL: "youtube-transcript-travel-busan-openai-small",
-    COHERE_MULTI: "youtube-transcript-travel-busan-cohere-multi",
-    VOYAGE_LARGE_2: "youtube-transcript-travel-busan-voyage-large-2",
-    HF_KOREAN: "youtube-transcript-travel-busan-hf-korean",
+  TRAVEL_BUSAN: {
+    OPENAI_SMALL: "travel-busan-openai-small",
+    COHERE_MULTI: "travel-busan-cohere-multi",
+    VOYAGE_LARGE_2: "travel-busan-voyage-large-2",
+    HF_KOREAN: "travel-busan-hf-korean",
   },
-  YOUTUBE_TRANSCRIPT_TRAVEL_JEJU: {
-    OPENAI_SMALL: "youtube-transcript-travel-jeju-openai-small",
-    COHERE_MULTI: "youtube-transcript-travel-jeju-cohere-multi",
-    VOYAGE_LARGE_2: "youtube-transcript-travel-jeju-voyage-large-2",
-    HF_KOREAN: "youtube-transcript-travel-jeju-hf-korean",
+  TRAVEL_JEJU: {
+    OPENAI_SMALL: "travel-jeju-openai-small",
+    COHERE_MULTI: "travel-jeju-cohere-multi",
+    VOYAGE_LARGE_2: "travel-jeju-voyage-large-2",
+    HF_KOREAN: "travel-jeju-hf-korean",
   },
 } as const;
 

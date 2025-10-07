@@ -46,23 +46,23 @@ export declare const PROCESSING_STATUS: {
 export type ProcessingStatus = typeof PROCESSING_STATUS[keyof typeof PROCESSING_STATUS];
 export type TSupportedLanguage = "ko" | "en" | "ja" | "zh-hans" | "zh-hant" | "es" | "fr" | "de";
 export declare const PINECONE_INDEX_NAME: {
-    readonly YOUTUBE_TRANSCRIPT_TRAVEL_SEOUL: {
-        readonly OPENAI_SMALL: "youtube-transcript-travel-seoul-openai-small";
-        readonly COHERE_MULTI: "youtube-transcript-travel-seoul-cohere-multi";
-        readonly VOYAGE_LARGE_2: "youtube-transcript-travel-seoul-voyage-large-2";
-        readonly HF_KOREAN: "youtube-transcript-travel-seoul-hf-korean";
+    readonly TRAVEL_SEOUL: {
+        readonly OPENAI_SMALL: "travel-seoul-openai-small";
+        readonly COHERE_MULTI: "travel-seoul-cohere-multi";
+        readonly VOYAGE_LARGE_2: "travel-seoul-voyage-large-2";
+        readonly HF_KOREAN: "travel-seoul-hf-korean";
     };
-    readonly YOUTUBE_TRANSCRIPT_TRAVEL_BUSAN: {
-        readonly OPENAI_SMALL: "youtube-transcript-travel-busan-openai-small";
-        readonly COHERE_MULTI: "youtube-transcript-travel-busan-cohere-multi";
-        readonly VOYAGE_LARGE_2: "youtube-transcript-travel-busan-voyage-large-2";
-        readonly HF_KOREAN: "youtube-transcript-travel-busan-hf-korean";
+    readonly TRAVEL_BUSAN: {
+        readonly OPENAI_SMALL: "travel-busan-openai-small";
+        readonly COHERE_MULTI: "travel-busan-cohere-multi";
+        readonly VOYAGE_LARGE_2: "travel-busan-voyage-large-2";
+        readonly HF_KOREAN: "travel-busan-hf-korean";
     };
-    readonly YOUTUBE_TRANSCRIPT_TRAVEL_JEJU: {
-        readonly OPENAI_SMALL: "youtube-transcript-travel-jeju-openai-small";
-        readonly COHERE_MULTI: "youtube-transcript-travel-jeju-cohere-multi";
-        readonly VOYAGE_LARGE_2: "youtube-transcript-travel-jeju-voyage-large-2";
-        readonly HF_KOREAN: "youtube-transcript-travel-jeju-hf-korean";
+    readonly TRAVEL_JEJU: {
+        readonly OPENAI_SMALL: "travel-jeju-openai-small";
+        readonly COHERE_MULTI: "travel-jeju-cohere-multi";
+        readonly VOYAGE_LARGE_2: "travel-jeju-voyage-large-2";
+        readonly HF_KOREAN: "travel-jeju-hf-korean";
     };
 };
 export declare const EMBEDDING_MODEL: {
