@@ -60,4 +60,5 @@ export type TPineconeVectorMetadataForContent = {
     blog_platform?: string;
     blog_platform_url?: string;
     hash_key?: string;
+    content?: string;
 };
