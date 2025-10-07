@@ -33,6 +33,7 @@ export type TSqlInstagramPostDetail = TSqlInstagramPostList & {
   og_ios_url: string | null;
   og_android_package: string | null;
   og_android_url: string | null;
+  content: string | null;
   tags: string[];
   user_profile_url: string | null;
   local_image_url: string | null;
@@ -97,6 +98,7 @@ export const SQL_DB_COLUMNS_INSTAGRAM_POST_DETAIL = [
   "og_ios_url",
   "og_android_package",
   "og_android_url",
+  "content",
   "tags",
   "user_profile_url",
   "local_image_url",
