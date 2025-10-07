@@ -20,6 +20,11 @@ export type TSqlBlogPostList = {
  */
 export type TSqlBlogPostDetail = TSqlBlogPostList & {
   featured_image_url: string;
+  og_title: string | null;
+  og_description: string | null;
+  og_image: string | null;
+  og_url: string | null;
+  local_image_url: string | null;
   content: string;
   tags: string[];
   metadata_json: string | null;
@@ -68,6 +73,11 @@ export const SQL_DB_COLUMNS_BLOG_POST_LIST = [
 export const SQL_DB_COLUMNS_BLOG_POST_DETAIL = [
   ...SQL_DB_COLUMNS_BLOG_POST_LIST,
   "featured_image_url",
+  "og_title",
+  "og_description",
+  "og_image",
+  "og_url",
+  "local_image_url",
   "content",
   "tags",
   "metadata_json",

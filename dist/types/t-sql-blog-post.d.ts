@@ -13,6 +13,11 @@ export type TSqlBlogPostList = {
 };
 export type TSqlBlogPostDetail = TSqlBlogPostList & {
     featured_image_url: string;
+    og_title: string | null;
+    og_description: string | null;
+    og_image: string | null;
+    og_url: string | null;
+    local_image_url: string | null;
     content: string;
     tags: string[];
     metadata_json: string | null;
