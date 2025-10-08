@@ -18,6 +18,7 @@ export * from "./fields/f-youtube-video-processing-log.js";
 export * from "./fields/f-youtube-video-transcript.js";
 export * from "./fields/f-youtube-video.js";
 export * from "./response/aiqna-response.js";
+export * from "./types/t-admin.js";
 export * from "./types/t-api-youtube-channel.js";
 export * from "./types/t-api-youtube-error.js";
 export * from "./types/t-api-youtube-search-result.js";
