@@ -1,6 +1,6 @@
 {
   "name": "aiqna_common_v1",
-  "version": "0.1.35",
+  "version": "0.1.36",
   "description": "Common modules for AI QNA API Server and Admin User Frontend",
   "keywords": [
     "aiqna"

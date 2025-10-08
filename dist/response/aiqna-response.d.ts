@@ -29,7 +29,7 @@ export type ResponseItemsFlat<TContent> = {
 /**
  * Response Content Detail For Public
  */
-export type ResponseAianaAPI<T> = {
+export type ResponseAiqnaAPI<T> = {
     success: boolean;
     alarm?: string | null;
     status?: string | null;
