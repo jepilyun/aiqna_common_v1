@@ -1,0 +1,83 @@
+export const F_ADMIN = {
+    aid: {
+        id: "aid",
+        label: "Admin ID (aid)",
+        is_required: true,
+        max_length: 12,
+        placeholder: "PK, Max 12 characters",
+    },
+    email: {
+        id: "email",
+        label: "Email",
+        is_required: true,
+        max_length: 511,
+        placeholder: "ex. abc@example.com",
+    },
+    pw: {
+        id: "pw",
+        label: "Password",
+        is_required: true,
+        max_length: 96,
+        placeholder: "********, hashed",
+    },
+    name: {
+        id: "name",
+        label: "Name",
+        is_required: false,
+        max_length: 48,
+    },
+    is_active: {
+        id: "is_active",
+        label: "Is Active",
+        is_required: true,
+        default_value: true,
+    },
+    level: {
+        id: "level",
+        label: "Level",
+        is_required: false,
+        max_length: 20,
+        placeholder: "ex. manager | developer | super | marketer | ...",
+    },
+    refresh_token: {
+        id: "refresh_token",
+        label: "Refresh Token",
+        is_required: false,
+        max_length: 1023,
+    },
+    refresh_token_issued_at: {
+        id: "refresh_token_issued_at",
+        label: "Refresh Token Issued At",
+        is_required: false,
+    },
+    created_at: {
+        id: "created_at",
+        label: "Created At",
+        is_required: true,
+    },
+    created_by: {
+        id: "created_by",
+        label: "Created By",
+        is_required: false,
+        max_length: 511,
+        placeholder: "ex. aid",
+    },
+    last_accessed_at: {
+        id: "last_accessed_at",
+        label: "Last Accessed At",
+        is_required: true,
+    },
+    deactivated_at: {
+        id: "deactivated_at",
+        label: "Deactivated At",
+        is_required: false,
+    },
+    deactivated_by: {
+        id: "deactivated_by",
+        label: "Deactivated By",
+        is_required: false,
+        max_length: 511,
+        placeholder: "ex. aid",
+    },
+};
+//# sourceMappingURL=f-admin.js.map

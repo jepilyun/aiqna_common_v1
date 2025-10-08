@@ -5,6 +5,7 @@ export * from "./consts/sql-db-table.js";
 export * from "./consts/supported-countries.js";
 export * from "./consts/supported-languages.js";
 
+export * from "./fields/f-admin.js";
 export * from "./fields/f-blog-post-processing-log.js";
 export * from "./fields/f-blog-post.js";
 export * from "./fields/f-country.js";
