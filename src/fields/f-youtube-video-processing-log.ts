@@ -14,7 +14,7 @@ export const F_YOUTUBE_VIDEO_PROCESSING_LOG = {
     placeholder: "ex. video_123",
   },
   processing_status: {
-    id: "name",
+    id: "processing_status",
     label: "Processing Status",
     is_required: true,
     max_length: 20,
