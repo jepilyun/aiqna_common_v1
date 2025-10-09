@@ -37,3 +37,4 @@ export * from "./types/t-sql-youtube-video-processing-log.js";
 export * from "./types/t-sql-youtube-video-transcript.js";
 export * from "./types/t-sql-youtube-video.js";
 export * from "./types/t-youtube-transcript.js";
+export * from "./types/t-youtube-video.js";

@@ -23,6 +23,10 @@ export type TSqlYoutubeVideoDetail = TSqlYoutubeVideoList & {
     kind: string;
     description: string | null;
     channel_url: string | null;
+    ai_summary: string | null;
+    main_topics: string[] | string | null;
+    key_points: string[] | string | null;
+    keywords: string[] | string | null;
     category_id: string | null;
     localized_title: string | null;
     localized_description: string | null;
@@ -61,7 +65,6 @@ export type TSqlYoutubeVideoDetail = TSqlYoutubeVideoList & {
     thumbnail_height: number;
     upload_date: string | null;
     category: string | null;
-    keywords: string[] | string | null;
     is_live: string;
     is_upcoming: string;
     is_private: string;

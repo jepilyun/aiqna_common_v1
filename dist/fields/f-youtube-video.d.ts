@@ -70,6 +70,38 @@ export declare const F_YOUTUBE_VIDEO: {
         max_length: number;
         placeholder: string;
     };
+    ai_summary: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+        default_value: string;
+    };
+    main_topics: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+        default_value: string;
+    };
+    key_points: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+        default_value: string;
+    };
+    keywords: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+        default_value: string;
+    };
     category_id: {
         id: string;
         label: string;
@@ -412,14 +444,6 @@ export declare const F_YOUTUBE_VIDEO: {
         is_required: boolean;
         max_length: number;
         placeholder: string;
-    };
-    keywords: {
-        id: string;
-        label: string;
-        is_required: boolean;
-        max_length: number;
-        placeholder: string;
-        default_value: string;
     };
     is_live: {
         id: string;
