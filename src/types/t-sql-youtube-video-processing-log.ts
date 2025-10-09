@@ -7,6 +7,7 @@ export type TSqlYoutubeVideoProcessingLog = {
   processing_status: string;
   error_message: string | null;
   index_name: string;
+  is_transcript_exist: boolean;
   is_api_data_fetched: boolean;
   is_transcript_fetched: boolean;
   is_pinecone_processed: boolean;

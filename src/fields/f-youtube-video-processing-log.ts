@@ -35,6 +35,13 @@ export const F_YOUTUBE_VIDEO_PROCESSING_LOG = {
     max_length: 255,
     placeholder: "PK ex. food_restaurants_index",
   },
+  is_transcript_exist: {
+    id: "is_transcript_exist",
+    label: "Is Transcript Exist",
+    is_required: true,
+    placeholder: "ex. false",
+    default_value: false,
+  },
   is_api_data_fetched: {
     id: "is_api_data_fetched",
     label: "Is API Data Fetched",

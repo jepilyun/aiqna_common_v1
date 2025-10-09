@@ -35,6 +35,13 @@ export declare const F_YOUTUBE_VIDEO_PROCESSING_LOG: {
         max_length: number;
         placeholder: string;
     };
+    is_transcript_exist: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        placeholder: string;
+        default_value: boolean;
+    };
     is_api_data_fetched: {
         id: string;
         label: string;
