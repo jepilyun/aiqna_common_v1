@@ -30,7 +30,6 @@ export type TPineconeVectorMetadataForContent = {
     text_length?: number;
     embedding_model: string;
     categories?: string[];
-    keywords?: string[];
     locations?: string[];
     names?: string[];
     created_at: string;
@@ -61,4 +60,8 @@ export type TPineconeVectorMetadataForContent = {
     blog_platform_url?: string;
     hash_key?: string;
     content?: string;
+    ai_summary?: string;
+    main_topics?: string[];
+    key_points?: string[];
+    keywords?: string[];
 };

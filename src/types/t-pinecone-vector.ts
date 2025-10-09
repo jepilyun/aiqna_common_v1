@@ -34,7 +34,6 @@ export type TPineconeVectorMetadataForContent = {
   text_length?: number;        // 텍스트 길이 (문자 수)
   embedding_model: string;    // 임베딩 생성에 사용된 모델명 (예: 'text-embedding-3-small')
   categories?: string[];      // 카테고리 목록
-  keywords?: string[];        // 키워드 목록
   locations?: string[];       // 위치 목록
   names?: string[];           // 이름 목록
   created_at: string;         // 데이터 생성 시각 (ISO 8601 형식)
@@ -65,4 +64,8 @@ export type TPineconeVectorMetadataForContent = {
   blog_platform_url?: string;   // Blog 플랫폼 URL
   hash_key?: string;
   content?: string;
+  ai_summary?: string;
+  main_topics?: string[];
+  key_points?: string[];
+  keywords?: string[];
 }
