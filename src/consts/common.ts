@@ -50,16 +50,6 @@ export const PROCESSING_STATUS = {
 
 export type ProcessingStatus = typeof PROCESSING_STATUS[keyof typeof PROCESSING_STATUS];
 
-export type TSupportedLanguage =
-  | "ko"
-  | "en"
-  | "ja"
-  | "zh-hans"
-  | "zh-hant"
-  | "es"
-  | "fr"
-  | "de";
-
 
 export const PINECONE_INDEX_NAME = {
   TRAVEL_SEOUL: {

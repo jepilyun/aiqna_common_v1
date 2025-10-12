@@ -2,8 +2,7 @@ export * from "./consts/all-countries.js";
 export * from "./consts/all-languages.js";
 export * from "./consts/common.js";
 export * from "./consts/sql-db-table.js";
-export * from "./consts/supported-countries.js";
-export * from "./consts/supported-languages.js";
+export * from "./consts/supported-i18n.js";
 
 export * from "./fields/f-admin.js";
 export * from "./fields/f-blog-post-processing-log.js";
