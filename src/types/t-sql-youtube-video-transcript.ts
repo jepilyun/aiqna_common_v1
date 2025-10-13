@@ -1,5 +1,3 @@
-import { TYouTubeTranscriptSegment } from "./t-youtube-transcript";
-
 /*
  * DB 컬럼 목록 For Youtube Video Processing Log
  */
@@ -9,8 +7,8 @@ export type TSqlYoutubeVideoTranscript = {
   language: string;
   total_duration: number | null;
   segment_count: number;
-  segments_json: string | null;
-  full_text: string | null;
+  segments_storage_path: string | null;
+  segments_file_size: number | null;
   created_at: string;
   updated_at: string;
 };
@@ -23,8 +21,8 @@ export type TSqlYoutubeVideoTranscriptInsert = {
   language?: string; // 기본값 'ko'
   total_duration?: number; // 초 단위
   segment_count?: number;
-  segments_json: TYouTubeTranscriptSegment[]; // JSONB로 저장
-  full_text?: string; // 전체 텍스트
+  segments_storage_path?: string; // 저장 경로
+  segments_file_size?: number; // 파일 크기
 };
 
 /*

@@ -1,12 +1,11 @@
-import { TYouTubeTranscriptSegment } from "./t-youtube-transcript";
 export type TSqlYoutubeVideoTranscript = {
     id: string;
     video_id: string;
     language: string;
     total_duration: number | null;
     segment_count: number;
-    segments_json: string | null;
-    full_text: string | null;
+    segments_storage_path: string | null;
+    segments_file_size: number | null;
     created_at: string;
     updated_at: string;
 };
@@ -15,8 +14,8 @@ export type TSqlYoutubeVideoTranscriptInsert = {
     language?: string;
     total_duration?: number;
     segment_count?: number;
-    segments_json: TYouTubeTranscriptSegment[];
-    full_text?: string;
+    segments_storage_path?: string;
+    segments_file_size?: number;
 };
 export type TSqlYoutubeVideoTranscriptUpdate = {
     video_id: string;
