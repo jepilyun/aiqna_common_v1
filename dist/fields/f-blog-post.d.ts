@@ -1,19 +1,5 @@
 export declare const F_BLOG_POST: {
-    id: {
-        id: string;
-        label: string;
-        is_required: boolean;
-        max_length: number;
-        placeholder: string;
-    };
     blog_post_url: {
-        id: string;
-        label: string;
-        is_required: boolean;
-        max_length: number;
-        placeholder: string;
-    };
-    featured_image_url: {
         id: string;
         label: string;
         is_required: boolean;
@@ -41,6 +27,41 @@ export declare const F_BLOG_POST: {
         max_length: number;
         placeholder: string;
         default_value: string;
+    };
+    og_title: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+    };
+    og_description: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+    };
+    og_image: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+    };
+    og_url: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+    };
+    local_image_url: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
     };
     platform: {
         id: string;

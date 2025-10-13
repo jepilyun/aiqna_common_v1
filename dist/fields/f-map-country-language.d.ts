@@ -1,4 +1,4 @@
-export declare const F_COUNTRY_LANGUAGE: {
+export declare const F_MAP_COUNTRY_LANGUAGE: {
     country_lang_code: {
         id: string;
         label: string;

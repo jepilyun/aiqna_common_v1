@@ -13,7 +13,7 @@ export declare const F_LANGUAGE: {
         max_length: number;
         placeholder: string;
     };
-    native: {
+    native_name: {
         id: string;
         label: string;
         is_required: boolean;

@@ -2,7 +2,6 @@
  * DB 컬럼 목록 For Youtube Video List
  */
 export const SQL_DB_COLUMNS_BLOG_POST_LIST = [
-    "id",
     "blog_post_url",
     "title",
     "platform",
@@ -19,13 +18,13 @@ export const SQL_DB_COLUMNS_BLOG_POST_LIST = [
  */
 export const SQL_DB_COLUMNS_BLOG_POST_DETAIL = [
     ...SQL_DB_COLUMNS_BLOG_POST_LIST,
+    "content",
+    "tags",
     "og_title",
     "og_description",
     "og_image",
     "og_url",
     "local_image_url",
-    "content",
-    "tags",
     "metadata_json",
     "deleted_at",
 ];

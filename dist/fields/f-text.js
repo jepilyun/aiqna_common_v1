@@ -1,16 +1,9 @@
 export const F_TEXT = {
-    id: {
-        id: "id",
-        label: "ID",
-        is_required: true,
-        max_length: 36,
-        placeholder: "ex. 123e4567-e89b-12d3-a456-426614174000",
-    },
     hash_key: {
         id: "hash_key",
         label: "Hash Key",
         is_required: true,
-        max_length: 36,
+        max_length: 64,
         placeholder: "ex. 123e4567-e89b-12d3-a456-426614174000",
     },
     title: {

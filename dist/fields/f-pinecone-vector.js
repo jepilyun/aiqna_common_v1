@@ -11,13 +11,13 @@ export const F_PINECONE_VECTOR = {
         label: "Source Type",
         is_required: true,
         max_length: 50,
-        placeholder: "ex. youtube, instagram, blog, text, etc.",
+        placeholder: "ex. youtube-video, instagram-post, blog-post, text, etc.",
     },
     source_id: {
         id: "source_id",
         label: "Source ID",
         is_required: true,
-        max_length: 100,
+        max_length: 1023,
         placeholder: "ex. 1234567890",
     },
     vector_id: {
@@ -61,6 +61,27 @@ export const F_PINECONE_VECTOR = {
         is_required: true,
         max_length: 100,
         placeholder: "ex. text-embedding-3-small",
+    },
+    embedding_dimension: {
+        id: "embedding_dimension",
+        label: "Embedding Dimension",
+        is_required: true,
+        max_length: 100,
+        placeholder: "ex. 1536",
+    },
+    chunk_text: {
+        id: "chunk_text",
+        label: "Chunk Text",
+        is_required: false,
+        max_length: 1023,
+        placeholder: "ex. Chunk Text",
+    },
+    chunk_tokens: {
+        id: "chunk_tokens",
+        label: "Chunk Tokens",
+        is_required: false,
+        max_length: 100,
+        placeholder: "ex. 10",
     },
     status: {
         id: "status",

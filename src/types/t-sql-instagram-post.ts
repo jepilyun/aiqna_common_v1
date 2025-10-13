@@ -2,7 +2,6 @@
  * DB 컬럼 목록 For Instagram Post
  */
 export type TSqlInstagramPostList = {
-  id: string;
   instagram_post_url: string;
   post_type: string;
   media_count: number;
@@ -56,9 +55,8 @@ export type TSqlInstagramPostDetailInsert = {
  * DB 컬럼 목록 For Youtube Video Update
  */
 export type TSqlInstagramPostDetailUpdate = {
-  id?: string;
-  instagram_post_url?: string;
-} & Partial<Omit<TSqlInstagramPostDetail, "id" | "instagram_post_url">>;
+  instagram_post_url: string;
+} & Partial<Omit<TSqlInstagramPostDetail, "instagram_post_url">>;
 
 
 
@@ -66,7 +64,6 @@ export type TSqlInstagramPostDetailUpdate = {
  * DB 컬럼 목록 For Youtube Video List
  */
 export const SQL_DB_COLUMNS_INSTAGRAM_POST_LIST = [
-  "id",
   "instagram_post_url",
   "post_type",
   "media_count",

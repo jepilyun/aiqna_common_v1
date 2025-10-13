@@ -62,6 +62,27 @@ export declare const F_PINECONE_VECTOR: {
         max_length: number;
         placeholder: string;
     };
+    embedding_dimension: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+    };
+    chunk_text: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+    };
+    chunk_tokens: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+    };
     status: {
         id: string;
         label: string;

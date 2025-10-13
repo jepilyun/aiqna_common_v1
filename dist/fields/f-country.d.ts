@@ -13,17 +13,11 @@ export declare const F_COUNTRY: {
         max_length: number;
         placeholder: string;
     };
-    native: {
+    native_name: {
         id: string;
         label: string;
         is_required: boolean;
         max_length: number;
         placeholder: string;
-    };
-    video_count: {
-        id: string;
-        label: string;
-        is_required: boolean;
-        default_value: number;
     };
 };

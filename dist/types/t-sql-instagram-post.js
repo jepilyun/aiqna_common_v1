@@ -2,7 +2,6 @@
  * DB 컬럼 목록 For Youtube Video List
  */
 export const SQL_DB_COLUMNS_INSTAGRAM_POST_LIST = [
-    "id",
     "instagram_post_url",
     "post_type",
     "media_count",

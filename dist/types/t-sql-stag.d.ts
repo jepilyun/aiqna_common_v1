@@ -1,0 +1,56 @@
+export type TSqlStagListForAdmin = {
+    stag_code: string;
+    target_country_code: string;
+    name_en: string;
+    name_native: string | null;
+    order_num: number;
+    url_en: string | null;
+    img_url: string | null;
+    youtube_ch_id: string | null;
+    instagram_id: string | null;
+    tiktok_id: string | null;
+    is_active: boolean;
+    is_display: boolean;
+};
+export type TSqlStagDetail = TSqlStagListForAdmin & {
+    description_en: string | null;
+    latitude: number | null;
+    longitude: number | null;
+    location: string | null;
+    radius_m: number | null;
+    address_en: string | null;
+    address_native: string | null;
+    google_map_url: string;
+    created_at: string;
+    created_by: string | null;
+    updated_at: string;
+    deactivated_at: string | null;
+    deactivated_by: string | null;
+    thumbnail_main_1: string | null;
+    thumbnail_main_2: string | null;
+    thumbnail_main_3: string | null;
+    thumbnail_main_4: string | null;
+    thumbnail_main_5: string | null;
+    thumbnail_1: string | null;
+    thumbnail_2: string | null;
+    thumbnail_3: string | null;
+    thumbnail_4: string | null;
+    thumbnail_5: string | null;
+    thumbnail_vertical_1: string | null;
+    thumbnail_vertical_2: string | null;
+    thumbnail_vertical_3: string | null;
+    thumbnail_vertical_4: string | null;
+    thumbnail_vertical_5: string | null;
+};
+export type TSqlStagDetailInsert = {
+    stag_code: string;
+    name_en: string;
+} & Partial<Omit<TSqlStagDetail, "stag_code" | "name_en">>;
+export type TSqlStagDetailUpdate = {
+    stag_code: string;
+} & Partial<Omit<TSqlStagDetail, "stag_code">>;
+export declare const DB_COLUMNS_STAG_LIST_FOR_ADMIN: string[];
+export declare const KEYS_STAG_STR: string[];
+export declare const KEYS_STAG_NUM: string[];
+export declare const KEYS_STAG_BOOL: string[];
+export declare const KEYS_STAG_STR_ARRAY: never[];

@@ -1,24 +1,10 @@
 export const F_BLOG_POST = {
-    id: {
-        id: "id",
-        label: "ID",
-        is_required: true,
-        max_length: 36,
-        placeholder: "ex. 123e4567-e89b-12d3-a456-426614174000",
-    },
     blog_post_url: {
         id: "blog_post_url",
         label: "Blog Post URL",
         is_required: true,
         max_length: 1023,
         placeholder: "ex. https://www.blog.com/1234567890/",
-    },
-    featured_image_url: {
-        id: "featured_image_url",
-        label: "Featured Image URL",
-        is_required: true,
-        max_length: 1023,
-        placeholder: "ex. https://www.blog.com/1234567890/featured_image.jpg",
     },
     title: {
         id: "title",
@@ -41,6 +27,41 @@ export const F_BLOG_POST = {
         max_length: 1023,
         placeholder: "ex. Tags",
         default_value: "[]",
+    },
+    og_title: {
+        id: "og_title",
+        label: "OG Title",
+        is_required: false,
+        max_length: 1023,
+        placeholder: "ex. OG Title",
+    },
+    og_description: {
+        id: "og_description",
+        label: "OG Description",
+        is_required: false,
+        max_length: 1023,
+        placeholder: "ex. OG Description",
+    },
+    og_image: {
+        id: "og_image",
+        label: "OG Image",
+        is_required: false,
+        max_length: 2048,
+        placeholder: "ex. OG Image",
+    },
+    og_url: {
+        id: "og_url",
+        label: "OG URL",
+        is_required: false,
+        max_length: 1023,
+        placeholder: "ex. OG URL",
+    },
+    local_image_url: {
+        id: "local_image_url",
+        label: "Local Image URL",
+        is_required: false,
+        max_length: 2048,
+        placeholder: "ex. Local Image URL",
     },
     platform: {
         id: "platform",

@@ -1,11 +1,4 @@
 export declare const F_YOUTUBE_VIDEO: {
-    id: {
-        id: string;
-        label: string;
-        is_required: boolean;
-        max_length: number;
-        placeholder: string;
-    };
     video_id: {
         id: string;
         label: string;

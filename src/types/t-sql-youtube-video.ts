@@ -2,7 +2,6 @@
  * DB 컬럼 목록 For Youtube Video
  */
 export type TSqlYoutubeVideoList = {
-  id: string;
   video_id: string;
   title: string;
   published_date: string | null;
@@ -94,9 +93,8 @@ export type TSqlYoutubeVideoDetailInsert = {
  * DB 컬럼 목록 For Youtube Video Update
  */
 export type TSqlYoutubeVideoDetailUpdate = {
-  id?: string;
-  video_id?: string;
-} & Partial<Omit<TSqlYoutubeVideoDetail, "id" | "video_id">>;
+  video_id: string;
+} & Partial<Omit<TSqlYoutubeVideoDetail, "video_id">>;
 
 
 

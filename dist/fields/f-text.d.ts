@@ -1,11 +1,4 @@
 export declare const F_TEXT: {
-    id: {
-        id: string;
-        label: string;
-        is_required: boolean;
-        max_length: number;
-        placeholder: string;
-    };
     hash_key: {
         id: string;
         label: string;

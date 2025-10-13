@@ -1,5 +1,4 @@
 export type TSqlBlogPostList = {
-    id: string;
     blog_post_url: string;
     title: string;
     platform: string;
@@ -12,13 +11,13 @@ export type TSqlBlogPostList = {
     is_deleted: boolean;
 };
 export type TSqlBlogPostDetail = TSqlBlogPostList & {
+    content: string | null;
+    tags: string[];
     og_title: string | null;
     og_description: string | null;
     og_image: string | null;
     og_url: string | null;
     local_image_url: string | null;
-    content: string;
-    tags: string[];
     metadata_json: string | null;
     deleted_at: string | null;
 };
@@ -26,8 +25,7 @@ export type TSqlBlogPostDetailInsert = {
     blog_post_url: string;
 } & Partial<Omit<TSqlBlogPostDetail, "blog_post_url">>;
 export type TSqlBlogPostDetailUpdate = {
-    id?: string;
-    blog_post_url?: string;
-} & Partial<Omit<TSqlBlogPostDetail, "id" | "blog_post_url">>;
+    blog_post_url: string;
+} & Partial<Omit<TSqlBlogPostDetail, "blog_post_url">>;
 export declare const SQL_DB_COLUMNS_BLOG_POST_LIST: string[];
 export declare const SQL_DB_COLUMNS_BLOG_POST_DETAIL: string[];

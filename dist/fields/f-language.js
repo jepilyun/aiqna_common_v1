@@ -13,9 +13,9 @@ export const F_LANGUAGE = {
         max_length: 48,
         placeholder: "ex. English, Korean, etc.",
     },
-    native: {
-        id: "native",
-        label: "Native",
+    native_name: {
+        id: "native_name",
+        label: "Native Name",
         is_required: true,
         max_length: 48,
         placeholder: "ex. English, Korean, etc.",

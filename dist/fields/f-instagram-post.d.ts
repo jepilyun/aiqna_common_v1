@@ -1,11 +1,4 @@
 export declare const F_INSTAGRAM_POST: {
-    id: {
-        id: string;
-        label: string;
-        is_required: boolean;
-        max_length: number;
-        placeholder: string;
-    };
     instagram_post_url: {
         id: string;
         label: string;
@@ -35,6 +28,55 @@ export declare const F_INSTAGRAM_POST: {
         max_length: number;
         placeholder: string;
         default_value: string;
+    };
+    og_title: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+    };
+    og_description: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+    };
+    og_image: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+    };
+    og_url: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+    };
+    og_ios_url: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+    };
+    og_android_package: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+    };
+    og_android_url: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
     };
     like_count: {
         id: string;

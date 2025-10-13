@@ -1,11 +1,4 @@
 export const F_YOUTUBE_VIDEO = {
-  id: {
-    id: "id",
-    label: "ID",
-    is_required: true,
-    max_length: 36,
-    placeholder: "ex. 123e4567-e89b-12d3-a456-426614174000",
-  },
   video_id: {
     id: "video_id",
     label: "Video ID",
