@@ -27,7 +27,7 @@ export interface IPineconeVectorMetadataBase {
   chunk_index: number;        // 청크 인덱스 (0부터 시작)
   chunk_id: string;           // 고유 청크 ID (형식: {video_id}_chunk_{chunk_index})
   title?: string;
-  content?: string;               // 청크의 실제 자막 텍스트 (여러 세그먼트를 합친 것)
+  text?: string;               // 청크의 실제 자막 텍스트 (여러 세그먼트를 합친 것)
   text_length?: number;        // 텍스트 길이 (문자 수)
   embedding_model: string;    // 임베딩 생성에 사용된 모델명 (예: 'text-embedding-3-small')
   categories: (

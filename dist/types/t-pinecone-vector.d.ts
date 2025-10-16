@@ -23,7 +23,7 @@ export interface IPineconeVectorMetadataBase {
     chunk_index: number;
     chunk_id: string;
     title?: string;
-    content?: string;
+    text?: string;
     text_length?: number;
     embedding_model: string;
     categories: ("cafe" | "restaurant" | "shopping" | "palace" | "history" | "museum" | "exhibition" | "themepark" | "activity" | "experience" | "festival" | "market" | "park" | "tour")[];
