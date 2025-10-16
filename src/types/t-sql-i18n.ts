@@ -3,7 +3,7 @@ export type TSqlLanguage = {
   lang_name: string;
   native_name: string;
   user_count: number;
-};
+}; 
 
 export type TSqlCountry = {
   country_code: string;

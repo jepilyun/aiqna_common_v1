@@ -16,52 +16,62 @@ export type TPineconeQueryResult = {
     values?: number[];
     metadata?: TPineconeMetadata;
 };
-/**
- * Pinecone에 저장될 자막 청크의 메타데이터
- * - 비디오 정보 + 자막 청크 관련 정보를 모두 포함
- */
-export type TPineconeVectorMetadataForContent = {
+export type TPineconeVectorMetadataBase = {
+    type?: string;
+    id?: string;
     language: string;
     chunk_index: number;
     chunk_id: string;
-    video_start_time?: number;
-    video_end_time?: number;
-    text?: string;
+    content?: string;
     text_length?: number;
     embedding_model: string;
-    categories?: string[];
-    locations?: string[];
-    names?: string[];
+    categories: ("cafe" | "restaurant" | "shopping" | "palace" | "history" | "museum" | "exhibition" | "themepark" | "activity" | "experience" | "festival" | "market" | "park" | "tour")[];
+    countries: string[];
+    cities: string[];
+    districts: string[];
+    neighborhoods: string[];
+    landmarks: string[];
+    venues: string[];
+    special_tags: string[];
+    names: string[];
+    keywords: string[];
+    tips: string[];
+    main_topics?: string[];
+    key_points?: string[];
+    confidence_score: number;
+    ai_summary?: string;
     created_at: string;
+};
+export type TPineconeVectorMetadataForVideo = TPineconeVectorMetadataBase & {
     video_id?: string;
     title?: string;
+    video_start_time?: number;
+    video_end_time?: number;
+    duration?: string;
     channel_id?: string;
     channel_title?: string;
     published_date?: string;
     thumbnail_url?: string;
-    duration?: string;
     view_count?: number;
     like_count?: number;
-    type?: string;
-    id?: string;
+};
+export type TPineconeVectorMetadataForInstagramPost = TPineconeVectorMetadataBase & {
     instagram_post_url?: string;
-    instagram_local_image_url?: string;
     instagram_user_id?: string;
     instagram_user_profile_url?: string;
-    instagram_post_date?: string;
+    published_date?: string;
+    local_image_url?: string;
+};
+export type TPineconeVectorMetadataForBlogPost = TPineconeVectorMetadataBase & {
+    title?: string;
+    image?: string;
     blog_post_url?: string;
-    blog_title?: string;
-    blog_content?: string;
-    blog_image?: string;
-    blog_published_date?: string;
-    blog_local_image_url?: string;
-    blog_tags?: string[];
+    published_date?: string;
+    local_image_url?: string;
+    tags?: string[];
     blog_platform?: string;
     blog_platform_url?: string;
-    hash_key?: string;
-    content?: string;
-    ai_summary?: string;
-    main_topics?: string[];
-    key_points?: string[];
-    keywords?: string[];
+};
+export type TPineconeVectorMetadataForText = TPineconeVectorMetadataBase & {
+    hash_key: string;
 };
