@@ -20,7 +20,7 @@ export type TPineconeQueryResult = {
   metadata?: TPineconeMetadata;
 };
 
-export type TPineconeVectorMetadataBase = {
+export interface IPineconeVectorMetadataBase {
   type?: string;
   id?: string;
   language: string;           // 자막 언어 코드
@@ -56,7 +56,7 @@ export type TPineconeVectorMetadataBase = {
   created_at: string;         // 데이터 생성 시각 (ISO 8601 형식)
 };
 
-export type TPineconeVectorMetadataForVideo = TPineconeVectorMetadataBase & {
+export interface IPineconeVectorMetadataForVideo extends IPineconeVectorMetadataBase {
   video_id?: string;         // YouTube 비디오 ID
   video_start_time?: number;         // 청크 시작 시간 (초 단위)
   video_end_time?: number;           // 청크 종료 시간 (초 단위)
@@ -69,7 +69,7 @@ export type TPineconeVectorMetadataForVideo = TPineconeVectorMetadataBase & {
   like_count?: number;      // 좋아요 수
 };
 
-export type TPineconeVectorMetadataForInstagramPost = TPineconeVectorMetadataBase & {
+export interface IPineconeVectorMetadataForInstagramPost extends IPineconeVectorMetadataBase {
   instagram_post_url?: string;   // Instagram 게시물 URL
   instagram_user_id?: string;   // Instagram 사용자 ID
   instagram_user_profile_url?: string;   // Instagram 사용자 프로필 URL
@@ -77,7 +77,7 @@ export type TPineconeVectorMetadataForInstagramPost = TPineconeVectorMetadataBas
   local_image_url?: string;   // Instagram 로컬 이미지 URL
 }
 
-export type TPineconeVectorMetadataForBlogPost = TPineconeVectorMetadataBase & {
+export interface IPineconeVectorMetadataForBlogPost extends IPineconeVectorMetadataBase {
   image?: string;   // Blog 이미지
   blog_post_url?: string;   // Blog 게시물 URL
   published_date?: string;   // Blog 게시 날짜 (ISO 8601 형식)
@@ -87,6 +87,6 @@ export type TPineconeVectorMetadataForBlogPost = TPineconeVectorMetadataBase & {
   blog_platform_url?: string;   // Blog 플랫폼 URL
 }
 
-export type TPineconeVectorMetadataForText = TPineconeVectorMetadataBase & {
+export interface IPineconeVectorMetadataForText extends IPineconeVectorMetadataBase {
   hash_key: string;
 }

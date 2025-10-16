@@ -16,7 +16,7 @@ export type TPineconeQueryResult = {
     values?: number[];
     metadata?: TPineconeMetadata;
 };
-export type TPineconeVectorMetadataBase = {
+export interface IPineconeVectorMetadataBase {
     type?: string;
     id?: string;
     language: string;
@@ -42,8 +42,8 @@ export type TPineconeVectorMetadataBase = {
     confidence_score: number;
     ai_summary?: string;
     created_at: string;
-};
-export type TPineconeVectorMetadataForVideo = TPineconeVectorMetadataBase & {
+}
+export interface IPineconeVectorMetadataForVideo extends IPineconeVectorMetadataBase {
     video_id?: string;
     video_start_time?: number;
     video_end_time?: number;
@@ -54,15 +54,15 @@ export type TPineconeVectorMetadataForVideo = TPineconeVectorMetadataBase & {
     thumbnail_url?: string;
     view_count?: number;
     like_count?: number;
-};
-export type TPineconeVectorMetadataForInstagramPost = TPineconeVectorMetadataBase & {
+}
+export interface IPineconeVectorMetadataForInstagramPost extends IPineconeVectorMetadataBase {
     instagram_post_url?: string;
     instagram_user_id?: string;
     instagram_user_profile_url?: string;
     published_date?: string;
     local_image_url?: string;
-};
-export type TPineconeVectorMetadataForBlogPost = TPineconeVectorMetadataBase & {
+}
+export interface IPineconeVectorMetadataForBlogPost extends IPineconeVectorMetadataBase {
     image?: string;
     blog_post_url?: string;
     published_date?: string;
@@ -70,7 +70,7 @@ export type TPineconeVectorMetadataForBlogPost = TPineconeVectorMetadataBase & {
     tags?: string[];
     blog_platform?: string;
     blog_platform_url?: string;
-};
-export type TPineconeVectorMetadataForText = TPineconeVectorMetadataBase & {
+}
+export interface IPineconeVectorMetadataForText extends IPineconeVectorMetadataBase {
     hash_key: string;
-};
+}
