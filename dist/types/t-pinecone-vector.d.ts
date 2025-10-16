@@ -22,6 +22,7 @@ export type TPineconeVectorMetadataBase = {
     language: string;
     chunk_index: number;
     chunk_id: string;
+    title?: string;
     content?: string;
     text_length?: number;
     embedding_model: string;
@@ -44,7 +45,6 @@ export type TPineconeVectorMetadataBase = {
 };
 export type TPineconeVectorMetadataForVideo = TPineconeVectorMetadataBase & {
     video_id?: string;
-    title?: string;
     video_start_time?: number;
     video_end_time?: number;
     duration?: string;
@@ -63,7 +63,6 @@ export type TPineconeVectorMetadataForInstagramPost = TPineconeVectorMetadataBas
     local_image_url?: string;
 };
 export type TPineconeVectorMetadataForBlogPost = TPineconeVectorMetadataBase & {
-    title?: string;
     image?: string;
     blog_post_url?: string;
     published_date?: string;

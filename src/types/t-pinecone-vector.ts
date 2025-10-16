@@ -26,6 +26,7 @@ export type TPineconeVectorMetadataBase = {
   language: string;           // 자막 언어 코드
   chunk_index: number;        // 청크 인덱스 (0부터 시작)
   chunk_id: string;           // 고유 청크 ID (형식: {video_id}_chunk_{chunk_index})
+  title?: string;
   content?: string;               // 청크의 실제 자막 텍스트 (여러 세그먼트를 합친 것)
   text_length?: number;        // 텍스트 길이 (문자 수)
   embedding_model: string;    // 임베딩 생성에 사용된 모델명 (예: 'text-embedding-3-small')
@@ -57,7 +58,6 @@ export type TPineconeVectorMetadataBase = {
 
 export type TPineconeVectorMetadataForVideo = TPineconeVectorMetadataBase & {
   video_id?: string;         // YouTube 비디오 ID
-  title?: string;            // 비디오 제목
   video_start_time?: number;         // 청크 시작 시간 (초 단위)
   video_end_time?: number;           // 청크 종료 시간 (초 단위)
   duration?: string;        // 비디오 길이 (ISO 8601 duration 형식, 예: PT1M30S = 1분 30초)
@@ -78,7 +78,6 @@ export type TPineconeVectorMetadataForInstagramPost = TPineconeVectorMetadataBas
 }
 
 export type TPineconeVectorMetadataForBlogPost = TPineconeVectorMetadataBase & {
-  title?: string;            // Blog 제목
   image?: string;   // Blog 이미지
   blog_post_url?: string;   // Blog 게시물 URL
   published_date?: string;   // Blog 게시 날짜 (ISO 8601 형식)
