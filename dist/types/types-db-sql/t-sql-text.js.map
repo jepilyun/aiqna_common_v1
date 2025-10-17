@@ -1,0 +1,1 @@
+{"version":3,"file":"t-sql-text.js","sourceRoot":"","sources":["../../../src/types/types-db-sql/t-sql-text.ts"],"names":[],"mappings":"AAuCA;;GAEG;AACH,MAAM,CAAC,MAAM,wBAAwB,GAAG;IACtC,IAAI;IACJ,UAAU;IACV,OAAO;IACP,YAAY;IACZ,YAAY;IACZ,mBAAmB;IACnB,WAAW;IACX,YAAY;CACb,CAAC;AAGF;;GAEG;AACH,MAAM,CAAC,MAAM,0BAA0B,GAAG;IACxC,GAAG,wBAAwB;IAC3B,SAAS;IACT,eAAe;IACf,YAAY;CACb,CAAC"}

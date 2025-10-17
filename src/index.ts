@@ -89,4 +89,3 @@ export * from "./types/types-youtube-api/t-api-youtube-video.js";
 export * from "./types/t-admin.js";
 export * from "./types/t-pinecone-vector.js";
 export * from "./types/t-youtube-transcript.js";
-export * from "./types/t-youtube-video.js";
