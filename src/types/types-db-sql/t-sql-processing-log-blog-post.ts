@@ -4,10 +4,11 @@
 export type TSqlProcessingLogBlogPost = {
   blog_post_url: string;
   processing_status: string;
-  error_message: string | null;
   index_name: string;
   is_data_fetched: boolean;
   is_pinecone_processed: boolean;
+  is_error_occurred: boolean;
+  error_message: string | null;
   processing_started: string | null;
   processing_completed: string | null;
   retry_count: number;

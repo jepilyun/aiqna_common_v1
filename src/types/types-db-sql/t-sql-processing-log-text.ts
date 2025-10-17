@@ -4,9 +4,10 @@
 export type TSqlProcessingLogText = {
   hash_key: string;
   processing_status: string;
-  error_message: string | null;
   index_name: string;
   is_pinecone_processed: boolean;
+  is_error_occurred: boolean;
+  error_message: string | null;
   processing_started: string | null;
   processing_completed: string | null;
   retry_count: number;

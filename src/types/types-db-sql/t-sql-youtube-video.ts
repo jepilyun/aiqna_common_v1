@@ -5,6 +5,7 @@ export type TSqlYoutubeVideoList = {
   video_id: string;
   title: string;
   published_date: string | null;
+  is_shorts: boolean;
   channel_id: string | null;
   channel_name: string | null;
   language: string;
@@ -30,10 +31,20 @@ export type TSqlYoutubeVideoDetail = TSqlYoutubeVideoList & {
   kind: string;
   description: string | null;
   channel_url: string | null;
-  ai_summary: string | null;
-  main_topics: string[] | null;
-  key_points: string[] | null;
-  keywords: string[] | null;
+  info_country: string[] | null;
+  info_city: string[] | null;
+  info_district: string[] | null;
+  info_neighborhood: string[] | null;
+  info_landmark: string[] | null;
+  info_category: string[] | null;
+  info_name: string[] | null;
+  info_special_tag: string[] | null;
+  info_influencer: string[] | null;
+  info_season: string[] | null;
+  info_time_of_day: string[] | null;
+  info_activity_type: string[] | null;
+  info_reservation_required: boolean;
+  info_travel_tips: string[] | null;
   category_id: string | null;
   localized_title: string | null;
   localized_description: string | null;
@@ -105,6 +116,7 @@ export const SQL_DB_COLUMNS_YOUTUBE_VIDEO_LIST = [
   "video_id",
   "title",
   "published_date",
+  "is_shorts",
   "channel_id",
   "channel_name",
   "language",
@@ -131,10 +143,20 @@ export const SQL_DB_COLUMNS_YOUTUBE_VIDEO_DETAIL = [
   "kind",
   "description",
   "channel_url",
-  "ai_summary",
-  "main_topics",
-  "key_points",
-  "keywords",
+  "info_country",
+  "info_city",
+  "info_district",
+  "info_neighborhood",
+  "info_landmark",
+  "info_category",
+  "info_name",
+  "info_special_tag",
+  "info_influencer",
+  "info_season",
+  "info_time_of_day",
+  "info_activity_type",
+  "info_reservation_required",
+  "info_travel_tips",
   "category_id",
   "localized_title",
   "localized_description",
