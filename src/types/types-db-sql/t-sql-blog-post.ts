@@ -2,6 +2,7 @@
  * DB 컬럼 목록 For Blog Post
  */
 export type TSqlBlogPostList = {
+  uuid_36: string;
   blog_post_url: string;
   title: string;
   platform: string;
@@ -41,8 +42,9 @@ export type TSqlBlogPostDetailInsert = {
  * DB 컬럼 목록 For Youtube Video Update
  */
 export type TSqlBlogPostDetailUpdate = {
-  blog_post_url: string;
-} & Partial<Omit<TSqlBlogPostDetail, "blog_post_url">>;
+  blog_post_url?: string;
+  uuid_36?: string;
+} & Partial<Omit<TSqlBlogPostDetail, "blog_post_url" | "uuid_36">>;
 
 
 
@@ -50,6 +52,7 @@ export type TSqlBlogPostDetailUpdate = {
  * DB 컬럼 목록 For Youtube Video List
  */
 export const SQL_DB_COLUMNS_BLOG_POST_LIST = [
+  "uuid_36",
   "blog_post_url",
   "title",
   "platform",

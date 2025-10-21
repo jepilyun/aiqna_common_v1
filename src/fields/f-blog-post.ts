@@ -1,4 +1,11 @@
 export const F_BLOG_POST = {
+  uuid_36: {
+    id: "uuid_36",
+    label: "UUID 36",
+    is_required: true,
+    max_length: 36,
+    placeholder: "ex. 123e4567-e89b-12d3-a456-426614174000",
+  },
   blog_post_url: {
     id: "blog_post_url",
     label: "Blog Post URL",

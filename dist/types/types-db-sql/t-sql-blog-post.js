@@ -2,6 +2,7 @@
  * DB 컬럼 목록 For Youtube Video List
  */
 export const SQL_DB_COLUMNS_BLOG_POST_LIST = [
+    "uuid_36",
     "blog_post_url",
     "title",
     "platform",

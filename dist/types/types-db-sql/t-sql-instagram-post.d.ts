@@ -1,4 +1,5 @@
 export type TSqlInstagramPostList = {
+    uuid_36: string;
     instagram_post_url: string;
     post_type: string;
     media_count: number;
@@ -38,7 +39,8 @@ export type TSqlInstagramPostDetailInsert = {
     instagram_post_url: string;
 } & Partial<Omit<TSqlInstagramPostDetail, "instagram_post_url">>;
 export type TSqlInstagramPostDetailUpdate = {
-    instagram_post_url: string;
-} & Partial<Omit<TSqlInstagramPostDetail, "instagram_post_url">>;
+    instagram_post_url?: string;
+    uuid_36?: string;
+} & Partial<Omit<TSqlInstagramPostDetail, "instagram_post_url" | "uuid_36">>;
 export declare const SQL_DB_COLUMNS_INSTAGRAM_POST_LIST: string[];
 export declare const SQL_DB_COLUMNS_INSTAGRAM_POST_DETAIL: string[];

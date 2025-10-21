@@ -1,4 +1,11 @@
 export declare const F_BLOG_POST: {
+    uuid_36: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+    };
     blog_post_url: {
         id: string;
         label: string;

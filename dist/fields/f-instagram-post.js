@@ -1,4 +1,11 @@
 export const F_INSTAGRAM_POST = {
+    uuid_36: {
+        id: "uuid_36",
+        label: "UUID 36",
+        is_required: true,
+        max_length: 36,
+        placeholder: "ex. 123e4567-e89b-12d3-a456-426614174000",
+    },
     instagram_post_url: {
         id: "instagram_post_url",
         label: "Instagram Post URL",

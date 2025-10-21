@@ -1,4 +1,11 @@
 export declare const F_INSTAGRAM_POST: {
+    uuid_36: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+    };
     instagram_post_url: {
         id: string;
         label: string;
