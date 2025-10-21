@@ -84,3 +84,10 @@ export declare const EMBEDDING_MODEL: {
         readonly LARGE: "text-embedding-004-large";
     };
 };
+export type TFormFieldProps = {
+    id: string;
+    label: string;
+    is_required: boolean;
+    max_length?: number;
+    placeholder?: string;
+};
