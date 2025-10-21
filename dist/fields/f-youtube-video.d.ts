@@ -28,6 +28,14 @@ export declare const F_YOUTUBE_VIDEO: {
         max_length: number;
         placeholder: string;
     };
+    is_shorts: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+        default_value: string;
+    };
     description: {
         id: string;
         label: string;
