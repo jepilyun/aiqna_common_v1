@@ -26,6 +26,20 @@ export type TSqlBlogPostDetail = TSqlBlogPostList & {
   og_image: string | null;
   og_url: string | null;
   local_image_url: string | null;
+  info_country: string[] | null;
+  info_city: string[] | null;
+  info_district: string[] | null;
+  info_neighborhood: string[] | null;
+  info_landmark: string[] | null;
+  info_category: string[] | null;
+  info_name: string[] | null;
+  info_special_tag: string[] | null;
+  info_influencer: string[] | null;
+  info_season: string[] | null;
+  info_time_of_day: string[] | null;
+  info_activity_type: string[] | null;
+  info_reservation_required: boolean;
+  info_travel_tips: string[] | null;
   metadata_json: string | null;
   deleted_at: string | null;
 };
@@ -78,6 +92,20 @@ export const SQL_DB_COLUMNS_BLOG_POST_DETAIL = [
   "og_image",
   "og_url",
   "local_image_url",
+  "info_country",
+  "info_city",
+  "info_district",
+  "info_neighborhood",
+  "info_landmark",
+  "info_category",
+  "info_name",
+  "info_special_tag",
+  "info_influencer",
+  "info_season",
+  "info_time_of_day",
+  "info_activity_type",
+  "info_reservation_required",
+  "info_travel_tips",
   "metadata_json",
   "deleted_at",
 ];

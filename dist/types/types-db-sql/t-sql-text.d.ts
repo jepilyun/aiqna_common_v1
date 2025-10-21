@@ -9,6 +9,20 @@ export type TSqlTextList = {
 };
 export type TSqlTextDetail = TSqlTextList & {
     content: string;
+    info_country: string[] | null;
+    info_city: string[] | null;
+    info_district: string[] | null;
+    info_neighborhood: string[] | null;
+    info_landmark: string[] | null;
+    info_category: string[] | null;
+    info_name: string[] | null;
+    info_special_tag: string[] | null;
+    info_influencer: string[] | null;
+    info_season: string[] | null;
+    info_time_of_day: string[] | null;
+    info_activity_type: string[] | null;
+    info_reservation_required: boolean;
+    info_travel_tips: string[] | null;
     metadata_json: string | null;
     deleted_at: string | null;
 };
