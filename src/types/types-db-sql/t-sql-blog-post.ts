@@ -55,10 +55,9 @@ export type TSqlBlogPostDetailInsert = {
 /*
  * DB 컬럼 목록 For Youtube Video Update
  */
-export type TSqlBlogPostDetailUpdate = {
-  blog_post_url?: string;
-  uuid_36?: string;
-} & Partial<Omit<TSqlBlogPostDetail, "blog_post_url" | "uuid_36">>;
+export type TSqlBlogPostDetailUpdate = Partial<
+  Omit<TSqlBlogPostDetail, "blog_post_url" | "uuid_36">
+>;
 
 
 

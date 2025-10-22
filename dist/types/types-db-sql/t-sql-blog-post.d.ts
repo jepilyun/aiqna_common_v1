@@ -39,9 +39,6 @@ export type TSqlBlogPostDetail = TSqlBlogPostList & {
 export type TSqlBlogPostDetailInsert = {
     blog_post_url: string;
 } & Partial<Omit<TSqlBlogPostDetail, "blog_post_url">>;
-export type TSqlBlogPostDetailUpdate = {
-    blog_post_url?: string;
-    uuid_36?: string;
-} & Partial<Omit<TSqlBlogPostDetail, "blog_post_url" | "uuid_36">>;
+export type TSqlBlogPostDetailUpdate = Partial<Omit<TSqlBlogPostDetail, "blog_post_url" | "uuid_36">>;
 export declare const SQL_DB_COLUMNS_BLOG_POST_LIST: string[];
 export declare const SQL_DB_COLUMNS_BLOG_POST_DETAIL: string[];

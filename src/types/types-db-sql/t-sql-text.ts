@@ -45,11 +45,9 @@ export type TSqlTextDetailInsert = {
 /*
  * DB 컬럼 목록 For Youtube Video Update
  */
-export type TSqlTextDetailUpdate = {
-  hash_key: string;
-} & Partial<Omit<TSqlTextDetail, "hash_key">>;
-
-
+export type TSqlTextDetailUpdate = Partial<
+  Omit<TSqlTextDetail, "hash_key">
+>;
 
 /*
  * DB 컬럼 목록 For Youtube Video List

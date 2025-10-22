@@ -103,11 +103,9 @@ export type TSqlYoutubeVideoDetailInsert = {
 /*
  * DB 컬럼 목록 For Youtube Video Update
  */
-export type TSqlYoutubeVideoDetailUpdate = {
-  video_id: string;
-} & Partial<Omit<TSqlYoutubeVideoDetail, "video_id">>;
-
-
+export type TSqlYoutubeVideoDetailUpdate = Partial<
+  Omit<TSqlYoutubeVideoDetail, "video_id">
+>;
 
 /*
  * DB 컬럼 목록 For Youtube Video List

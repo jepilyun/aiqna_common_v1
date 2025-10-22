@@ -69,11 +69,9 @@ export type TSqlInstagramPostDetailInsert = {
 /*
  * DB 컬럼 목록 For Youtube Video Update
  */
-export type TSqlInstagramPostDetailUpdate = {
-  instagram_post_url?: string;
-  uuid_36?: string;
-} & Partial<Omit<TSqlInstagramPostDetail, "instagram_post_url" | "uuid_36">>;
-
+export type TSqlInstagramPostDetailUpdate = Partial<
+  Omit<TSqlInstagramPostDetail, "instagram_post_url" | "uuid_36">
+>;
 
 
 /*

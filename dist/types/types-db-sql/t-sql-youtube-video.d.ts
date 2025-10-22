@@ -86,8 +86,6 @@ export type TSqlYoutubeVideoDetail = TSqlYoutubeVideoList & {
 export type TSqlYoutubeVideoDetailInsert = {
     video_id: string;
 } & Partial<Omit<TSqlYoutubeVideoDetail, "video_id">>;
-export type TSqlYoutubeVideoDetailUpdate = {
-    video_id: string;
-} & Partial<Omit<TSqlYoutubeVideoDetail, "video_id">>;
+export type TSqlYoutubeVideoDetailUpdate = Partial<Omit<TSqlYoutubeVideoDetail, "video_id">>;
 export declare const SQL_DB_COLUMNS_YOUTUBE_VIDEO_LIST: string[];
 export declare const SQL_DB_COLUMNS_YOUTUBE_VIDEO_DETAIL: string[];
