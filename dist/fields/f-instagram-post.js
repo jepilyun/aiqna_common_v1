@@ -18,7 +18,7 @@ export const F_INSTAGRAM_POST = {
         label: "Post Type",
         is_required: true,
         max_length: 20,
-        placeholder: "ex. post, story, reel, IGTV, etc.",
+        placeholder: "ex. 'image', 'video', 'carousel', 'reel', 'story'",
     },
     media_count: {
         id: "media_count",

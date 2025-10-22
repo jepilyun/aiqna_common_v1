@@ -55,7 +55,6 @@ export type TSqlTextDetailUpdate = {
  * DB 컬럼 목록 For Youtube Video List
  */
 export const SQL_DB_COLUMNS_TEXT_LIST = [
-  "id",
   "hash_key",
   "title",
   "created_at",
