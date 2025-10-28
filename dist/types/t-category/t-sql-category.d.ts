@@ -1,0 +1,55 @@
+export type TSqlCategoryListForAdmin = {
+    category_code: string;
+    target_country_code: string;
+    upper_category_code: string;
+    order_num: number;
+    name_en: string;
+    name_ko: string;
+    is_open_always: boolean;
+    start_month: number;
+    start_day: number;
+    end_month: number;
+    end_day: number;
+    is_active: boolean;
+    is_display: boolean;
+};
+export type TSqlCategoryDetail = TSqlCategoryListForAdmin & {
+    description_en: string | null;
+    description_ko: string | null;
+    icon_url: string | null;
+    img_url: string | null;
+    created_at: string;
+    created_by: string | null;
+    updated_at: string;
+    is_active: boolean;
+    deactivated_at: string | null;
+    deactivated_by: string | null;
+    is_display: boolean;
+    thumbnail_main_1: string | null;
+    thumbnail_main_2: string | null;
+    thumbnail_main_3: string | null;
+    thumbnail_main_4: string | null;
+    thumbnail_main_5: string | null;
+    thumbnail_1: string | null;
+    thumbnail_2: string | null;
+    thumbnail_3: string | null;
+    thumbnail_4: string | null;
+    thumbnail_5: string | null;
+    thumbnail_vertical_1: string | null;
+    thumbnail_vertical_2: string | null;
+    thumbnail_vertical_3: string | null;
+    thumbnail_vertical_4: string | null;
+    thumbnail_vertical_5: string | null;
+};
+export type TSqlCategoryDetailInsert = {
+    category_code: string;
+    name_en: string;
+} & Partial<Omit<TSqlCategoryDetail, "category_code" | "name_en">>;
+export type TSqlCategoryDetailUpdate = {
+    category_code: string;
+} & Partial<Omit<TSqlCategoryDetail, "category_code">>;
+export declare const DB_COLUMNS_CATEGORY_LIST_FOR_ADMIN: string[];
+export declare const KEYS_CATEGORY_STR: string[];
+export declare const KEYS_CATEGORY_NUM: string[];
+export declare const KEYS_CATEGORY_BOOL: string[];
+export declare const KEYS_CATEGORY_STR_ARRAY: never[];

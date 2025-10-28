@@ -1,0 +1,42 @@
+export declare const F_CITY_I18N: {
+    city_code: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+    };
+    lang_code: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+    };
+    name_i18n: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+    };
+    description_i18n: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        max_length: number;
+        placeholder: string;
+    };
+    created_at: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        placeholder: string;
+    };
+    updated_at: {
+        id: string;
+        label: string;
+        is_required: boolean;
+        placeholder: string;
+    };
+};
