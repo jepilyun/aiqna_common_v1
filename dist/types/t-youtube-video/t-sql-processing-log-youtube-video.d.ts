@@ -22,4 +22,4 @@ export type TSqlProcessingLogYoutubeVideo = {
 export type TSqlProcessingLogYoutubeVideoInsert = {
     video_id: string;
 } & Partial<Omit<TSqlProcessingLogYoutubeVideo, "video_id">>;
-export type TSqlProcessingLogYoutubeVideoUpdate = Omit<TSqlProcessingLogYoutubeVideo, "video_id">;
+export type TSqlProcessingLogYoutubeVideoUpdate = Partial<Omit<TSqlProcessingLogYoutubeVideo, "video_id">>;

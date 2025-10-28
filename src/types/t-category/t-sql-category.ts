@@ -66,9 +66,7 @@ export type TSqlCategoryDetailInsert = {
 /*
  * DB 컬럼 목록 For City Detail Update
  */
-export type TSqlCategoryDetailUpdate = {
-  category_code: string;
-} & Partial<Omit<TSqlCategoryDetail, "category_code">>;
+export type TSqlCategoryDetailUpdate = Partial<Omit<TSqlCategoryDetail, "category_code">>;
 
 /*
  * DB 컬럼 목록 For Category List For Admin

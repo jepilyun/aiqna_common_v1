@@ -19,5 +19,5 @@ export type TSqlTempContentDataInsert = {
   id?: string | null;
 } & Partial<Omit<TSqlTempContentData, "id">>;
 
-export type TSqlTempContentDataUpdate = Omit<TSqlTempContentData, "id">;
+export type TSqlTempContentDataUpdate = Partial<Omit<TSqlTempContentData, "id">>;
 

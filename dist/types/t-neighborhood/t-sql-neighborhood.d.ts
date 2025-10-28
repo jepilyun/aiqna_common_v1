@@ -47,7 +47,7 @@ export type TSqlNeighborhoodDetail = TSqlNeighborhoodListForAdmin & {
 export type TSqlNeighborhoodDetailInsert = {
     name_en: string;
 } & Partial<Omit<TSqlNeighborhoodDetail, "name_en">>;
-export type TSqlNeighborhoodDetailUpdate = Omit<TSqlNeighborhoodDetail, "id">;
+export type TSqlNeighborhoodDetailUpdate = Partial<Omit<TSqlNeighborhoodDetail, "id">>;
 export declare const DB_COLUMNS_NEIGHBORHOOD_LIST_FOR_ADMIN: string[];
 export declare const KEYS_NEIGHBORHOOD_STR: string[];
 export declare const KEYS_NEIGHBORHOOD_NUM: string[];

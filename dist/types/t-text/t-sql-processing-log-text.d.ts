@@ -19,4 +19,4 @@ export type TSqlProcessingLogText = {
 export type TSqlProcessingLogTextInsert = {
     hash_key: string;
 } & Partial<Omit<TSqlProcessingLogText, "hash_key" | "id">>;
-export type TSqlProcessingLogTextUpdate = Omit<TSqlProcessingLogText, "hash_key" | "id">;
+export type TSqlProcessingLogTextUpdate = Partial<Omit<TSqlProcessingLogText, "hash_key" | "id">>;

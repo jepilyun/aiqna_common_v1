@@ -22,4 +22,4 @@ export type TSqlInfluencerI18nInsert = {
 /*
  * DB 컬럼 목록 For Landmark I18n Update
  */
-export type TSqlInfluencerI18nUpdate = Omit<TSqlInfluencerI18n, "influencer_id" | "lang_code">;
+export type TSqlInfluencerI18nUpdate = Partial<Omit<TSqlInfluencerI18n, "influencer_id" | "lang_code">>;

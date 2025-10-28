@@ -22,4 +22,4 @@ export type TSqlLandmarkI18nInsert = {
 /*
  * DB 컬럼 목록 For Landmark I18n Update
  */
-export type TSqlLandmarkI18nUpdate = Omit<TSqlLandmarkI18n, "landmark_id" | "lang_code">;
+export type TSqlLandmarkI18nUpdate = Partial<Omit<TSqlLandmarkI18n, "landmark_id" | "lang_code">>;

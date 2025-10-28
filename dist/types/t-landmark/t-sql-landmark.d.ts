@@ -47,7 +47,7 @@ export type TSqlLandmarkDetail = TSqlLandmarkListForAdmin & {
 export type TSqlLandmarkDetailInsert = {
     name_en: string;
 } & Partial<Omit<TSqlLandmarkDetail, "name_en">>;
-export type TSqlLandmarkDetailUpdate = Omit<TSqlLandmarkDetail, "id">;
+export type TSqlLandmarkDetailUpdate = Partial<Omit<TSqlLandmarkDetail, "id">>;
 export declare const DB_COLUMNS_LANDMARK_LIST_FOR_ADMIN: string[];
 export declare const KEYS_LANDMARK_STR: string[];
 export declare const KEYS_LANDMARK_NUM: string[];

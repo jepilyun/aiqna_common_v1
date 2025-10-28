@@ -17,4 +17,4 @@ export type TSqlYoutubeVideoTranscriptInsert = {
     segments_storage_path?: string;
     segments_file_size?: number;
 };
-export type TSqlYoutubeVideoTranscriptUpdate = Omit<TSqlYoutubeVideoTranscript, "id" | "video_id">;
+export type TSqlYoutubeVideoTranscriptUpdate = Partial<Omit<TSqlYoutubeVideoTranscript, "id" | "video_id">>;

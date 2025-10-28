@@ -46,7 +46,7 @@ export type TSqlStagDetailInsert = {
     stag_code: string;
     name_en: string;
 } & Partial<Omit<TSqlStagDetail, "stag_code" | "name_en">>;
-export type TSqlStagDetailUpdate = Omit<TSqlStagDetail, "stag_code">;
+export type TSqlStagDetailUpdate = Partial<Omit<TSqlStagDetail, "stag_code">>;
 export declare const DB_COLUMNS_STAG_LIST_FOR_ADMIN: string[];
 export declare const KEYS_STAG_STR: string[];
 export declare const KEYS_STAG_NUM: string[];

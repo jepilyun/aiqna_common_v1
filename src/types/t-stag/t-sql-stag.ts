@@ -67,7 +67,7 @@ export type TSqlStagDetailInsert = {
 /*
  * DB 컬럼 목록 For Stag Detail Update
  */
-export type TSqlStagDetailUpdate = Omit<TSqlStagDetail, "stag_code">;
+export type TSqlStagDetailUpdate = Partial<Omit<TSqlStagDetail, "stag_code">>;
 
 /*
  * DB 컬럼 목록 For Stag List For Admin

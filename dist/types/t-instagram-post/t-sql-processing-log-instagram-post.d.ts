@@ -20,4 +20,4 @@ export type TSqlProcessingLogInstagramPost = {
 export type TSqlProcessingLogInstagramPostInsert = {
     instagram_post_url: string;
 } & Partial<Omit<TSqlProcessingLogInstagramPost, 'instagram_post_url'>>;
-export type TSqlProcessingLogInstagramPostUpdate = Omit<TSqlProcessingLogInstagramPost, 'instagram_post_url' | 'id'>;
+export type TSqlProcessingLogInstagramPostUpdate = Partial<Omit<TSqlProcessingLogInstagramPost, 'instagram_post_url' | 'id'>>;

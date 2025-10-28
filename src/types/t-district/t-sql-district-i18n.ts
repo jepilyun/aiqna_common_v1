@@ -22,4 +22,4 @@ export type TSqlDistrictI18nInsert = {
 /*
  * DB 컬럼 목록 For District I18n Update
  */
-export type TSqlDistrictI18nUpdate = Omit<TSqlDistrictI18n, "district_code" | "lang_code">;
+export type TSqlDistrictI18nUpdate = Partial<Omit<TSqlDistrictI18n, "district_code" | "lang_code">>;

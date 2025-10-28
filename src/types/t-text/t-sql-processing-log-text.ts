@@ -30,5 +30,5 @@ export type TSqlProcessingLogTextInsert = {
 /*
  * DB 컬럼 목록 For Youtube Video Processing Log
  */
-export type TSqlProcessingLogTextUpdate = Omit<TSqlProcessingLogText, "hash_key" | "id">;
+export type TSqlProcessingLogTextUpdate = Partial<Omit<TSqlProcessingLogText, "hash_key" | "id">>;
 

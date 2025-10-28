@@ -19,6 +19,4 @@ export type TSqlPineconeVector = {
 export type TSqlPineconeVectorInsert = {
     source_id: string;
 } & Partial<Omit<TSqlPineconeVector, "source_id" | "id">>;
-export type TSqlPineconeVectorUpdate = {
-    source_id: string;
-} & Partial<Omit<TSqlPineconeVector, "source_id" | "id">>;
+export type TSqlPineconeVectorUpdate = Partial<Omit<TSqlPineconeVector, "source_id" | "id">>;

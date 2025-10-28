@@ -30,7 +30,5 @@ export type TSqlPineconeVectorInsert = {
 /*
  * DB 컬럼 목록 For Pinecone Processing Log
  */
-export type TSqlPineconeVectorUpdate = {
-  source_id: string;
-} & Partial<Omit<TSqlPineconeVector, "source_id" | "id">>;
+export type TSqlPineconeVectorUpdate = Partial<Omit<TSqlPineconeVector, "source_id" | "id">>;
 

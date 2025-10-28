@@ -20,4 +20,4 @@ export type TSqlProcessingLogBlogPost = {
 export type TSqlProcessingLogBlogPostInsert = {
     blog_post_url: string;
 } & Partial<Omit<TSqlProcessingLogBlogPost, "blog_post_url" | "id">>;
-export type TSqlProcessingLogBlogPostUpdate = Omit<TSqlProcessingLogBlogPost, "blog_post_url" | "id">;
+export type TSqlProcessingLogBlogPostUpdate = Partial<Omit<TSqlProcessingLogBlogPost, "blog_post_url" | "id">>;

@@ -63,9 +63,7 @@ export type TSqlContentDetailInsert = {
     content_code: string;
     name_en: string;
 } & Partial<Omit<TSqlContentDetail, "content_code" | "name_en">>;
-export type TSqlContentDetailUpdate = {
-    content_code: string;
-} & Partial<Omit<TSqlContentDetail, "content_code">>;
+export type TSqlContentDetailUpdate = Partial<Omit<TSqlContentDetail, "content_code">>;
 export declare const DB_COLUMNS_CONTENT_LIST_FOR_ADMIN: string[];
 export declare const KEYS_CONTENT_STR: string[];
 export declare const KEYS_CONTENT_NUM: string[];

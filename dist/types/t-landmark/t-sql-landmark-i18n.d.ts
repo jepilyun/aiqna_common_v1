@@ -11,4 +11,4 @@ export type TSqlLandmarkI18nInsert = {
     lang_code: string;
     name_i18n: string;
 } & Partial<Omit<TSqlLandmarkI18n, "landmark_id" | "lang_code" | "name_i18n">>;
-export type TSqlLandmarkI18nUpdate = Omit<TSqlLandmarkI18n, "landmark_id" | "lang_code">;
+export type TSqlLandmarkI18nUpdate = Partial<Omit<TSqlLandmarkI18n, "landmark_id" | "lang_code">>;

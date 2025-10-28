@@ -67,7 +67,7 @@ export type TSqlNeighborhoodDetailInsert = {
 /*
  * DB 컬럼 목록 For Neighborhood Detail Update
  */
-export type TSqlNeighborhoodDetailUpdate = Omit<TSqlNeighborhoodDetail, "id">;
+export type TSqlNeighborhoodDetailUpdate = Partial<Omit<TSqlNeighborhoodDetail, "id">>;
 
 /*
  * DB 컬럼 목록 For Neighborhood List For Admin

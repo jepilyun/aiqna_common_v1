@@ -22,4 +22,4 @@ export type TSqlNeighborhoodI18nInsert = {
 /*
  * DB 컬럼 목록 For Neighborhood I18n Update
  */
-export type TSqlNeighborhoodI18nUpdate = Omit<TSqlNeighborhoodI18n, "neighborhood_id" | "lang_code">;
+export type TSqlNeighborhoodI18nUpdate = Partial<Omit<TSqlNeighborhoodI18n, "neighborhood_id" | "lang_code">>;

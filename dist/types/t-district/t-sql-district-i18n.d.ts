@@ -11,4 +11,4 @@ export type TSqlDistrictI18nInsert = {
     lang_code: string;
     name_i18n: string;
 } & Partial<Omit<TSqlDistrictI18n, "district_code" | "lang_code" | "name_i18n">>;
-export type TSqlDistrictI18nUpdate = Omit<TSqlDistrictI18n, "district_code" | "lang_code">;
+export type TSqlDistrictI18nUpdate = Partial<Omit<TSqlDistrictI18n, "district_code" | "lang_code">>;

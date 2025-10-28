@@ -18,8 +18,4 @@ export type TSqlMapGooglePlaceInsert = {
     source_type: string;
     source_id: string;
 } & Partial<Omit<TSqlMapGooglePlace, "google_place_id" | "source_type" | "source_id">>;
-export type TSqlMapGooglePlaceUpdate = {
-    google_place_id: string;
-    source_type: string;
-    source_id: string;
-} & Partial<Omit<TSqlMapGooglePlace, "google_place_id" | "source_type" | "source_id">>;
+export type TSqlMapGooglePlaceUpdate = Partial<Omit<TSqlMapGooglePlace, "google_place_id" | "source_type" | "source_id">>;

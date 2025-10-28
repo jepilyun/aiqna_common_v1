@@ -14,4 +14,4 @@ export type TSqlTempGooglePlaceData = {
 export type TSqlTempGooglePlaceDataInsert = {
     id?: string | null;
 } & Partial<Omit<TSqlTempGooglePlaceData, "id">>;
-export type TSqlTempGooglePlaceDataUpdate = Omit<TSqlTempGooglePlaceData, "id">;
+export type TSqlTempGooglePlaceDataUpdate = Partial<Omit<TSqlTempGooglePlaceData, "id">>;

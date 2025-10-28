@@ -47,7 +47,7 @@ export type TSqlInfluencerDetail = TSqlInfluencerListForAdmin & {
 export type TSqlInfluencerDetailInsert = {
     name_en: string;
 } & Partial<Omit<TSqlInfluencerDetail, "name_en">>;
-export type TSqlInfluencerDetailUpdate = Omit<TSqlInfluencerDetail, "id">;
+export type TSqlInfluencerDetailUpdate = Partial<Omit<TSqlInfluencerDetail, "id">>;
 export declare const DB_COLUMNS_INFLUENCER_LIST_FOR_ADMIN: string[];
 export declare const KEYS_INFLUENCER_STR: string[];
 export declare const KEYS_INFLUENCER_NUM: string[];

@@ -28,4 +28,4 @@ export type TSqlYoutubeVideoTranscriptInsert = {
 /*
  * DB 컬럼 목록 For Youtube Video Transcript
  */
-export type TSqlYoutubeVideoTranscriptUpdate = Omit<TSqlYoutubeVideoTranscript, "id" | "video_id">;
+export type TSqlYoutubeVideoTranscriptUpdate = Partial<Omit<TSqlYoutubeVideoTranscript, "id" | "video_id">>;

@@ -67,7 +67,7 @@ export type TSqlInfluencerDetailInsert = {
 /*
  * DB 컬럼 목록 For Influencer Detail Update
  */
-export type TSqlInfluencerDetailUpdate = Omit<TSqlInfluencerDetail, "id">;
+export type TSqlInfluencerDetailUpdate = Partial<Omit<TSqlInfluencerDetail, "id">>;
 
 /*
  * DB 컬럼 목록 For Influencer List For Admin

@@ -84,9 +84,7 @@ export type TSqlContentDetailInsert = {
 /*
  * DB 컬럼 목록 For City Detail Update
  */
-export type TSqlContentDetailUpdate = {
-  content_code: string;
-} & Partial<Omit<TSqlContentDetail, "content_code">>;
+export type TSqlContentDetailUpdate = Partial<Omit<TSqlContentDetail, "content_code">>;
 
 /*
  * DB 컬럼 목록 For Google Place List For Admin

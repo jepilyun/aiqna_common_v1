@@ -45,9 +45,7 @@ export type TSqlCategoryDetailInsert = {
     category_code: string;
     name_en: string;
 } & Partial<Omit<TSqlCategoryDetail, "category_code" | "name_en">>;
-export type TSqlCategoryDetailUpdate = {
-    category_code: string;
-} & Partial<Omit<TSqlCategoryDetail, "category_code">>;
+export type TSqlCategoryDetailUpdate = Partial<Omit<TSqlCategoryDetail, "category_code">>;
 export declare const DB_COLUMNS_CATEGORY_LIST_FOR_ADMIN: string[];
 export declare const KEYS_CATEGORY_STR: string[];
 export declare const KEYS_CATEGORY_NUM: string[];

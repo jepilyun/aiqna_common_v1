@@ -11,4 +11,4 @@ export type TSqlStagI18nInsert = {
     lang_code: string;
     name_i18n: string;
 } & Partial<Omit<TSqlStagI18n, "stag_code" | "lang_code" | "name_i18n">>;
-export type TSqlStagI18nUpdate = Omit<TSqlStagI18n, "stag_code" | "lang_code">;
+export type TSqlStagI18nUpdate = Partial<Omit<TSqlStagI18n, "stag_code" | "lang_code">>;

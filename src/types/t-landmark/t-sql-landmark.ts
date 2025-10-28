@@ -67,7 +67,7 @@ export type TSqlLandmarkDetailInsert = {
 /*
  * DB 컬럼 목록 For Landmark Detail Update
  */
-export type TSqlLandmarkDetailUpdate = Omit<TSqlLandmarkDetail, "id">;
+export type TSqlLandmarkDetailUpdate = Partial<Omit<TSqlLandmarkDetail, "id">>;
 
 /*
  * DB 컬럼 목록 For Landmark List For Admin

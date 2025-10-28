@@ -33,7 +33,7 @@ export type TSqlQnaLogDetailInsert = {
     id: string;
     question_native: string;
 } & Partial<Omit<TSqlQnaLogDetail, "id" | "question_native">>;
-export type TSqlQnaLogDetailUpdate = Omit<TSqlQnaLogDetail, "id">;
+export type TSqlQnaLogDetailUpdate = Partial<Omit<TSqlQnaLogDetail, "id">>;
 export declare const DB_COLUMNS_QNA_LOG_LIST_FOR_ADMIN: string[];
 export declare const KEYS_QNA_LOG_STR: string[];
 export declare const KEYS_QNA_LOG_NUM: string[];

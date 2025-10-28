@@ -22,4 +22,4 @@ export type TSqlStagI18nInsert = {
 /*
  * DB 컬럼 목록 For Stag I18n Update
  */
-export type TSqlStagI18nUpdate = Omit<TSqlStagI18n, "stag_code" | "lang_code">;
+export type TSqlStagI18nUpdate = Partial<Omit<TSqlStagI18n, "stag_code" | "lang_code">>;

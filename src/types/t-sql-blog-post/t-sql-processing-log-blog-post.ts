@@ -31,5 +31,5 @@ export type TSqlProcessingLogBlogPostInsert = {
 /*
  * DB 컬럼 목록 For Youtube Video Processing Log
  */
-export type TSqlProcessingLogBlogPostUpdate = Omit<TSqlProcessingLogBlogPost, "blog_post_url" | "id">;
+export type TSqlProcessingLogBlogPostUpdate = Partial<Omit<TSqlProcessingLogBlogPost, "blog_post_url" | "id">>;
 

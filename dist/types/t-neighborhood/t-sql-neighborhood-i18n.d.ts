@@ -11,4 +11,4 @@ export type TSqlNeighborhoodI18nInsert = {
     lang_code: string;
     name_i18n: string;
 } & Partial<Omit<TSqlNeighborhoodI18n, "neighborhood_id" | "lang_code" | "name_i18n">>;
-export type TSqlNeighborhoodI18nUpdate = Omit<TSqlNeighborhoodI18n, "neighborhood_id" | "lang_code">;
+export type TSqlNeighborhoodI18nUpdate = Partial<Omit<TSqlNeighborhoodI18n, "neighborhood_id" | "lang_code">>;

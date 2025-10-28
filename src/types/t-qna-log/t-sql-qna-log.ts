@@ -54,7 +54,7 @@ export type TSqlQnaLogDetailInsert = {
 /*
  * DB 컬럼 목록 For QNA Log Detail Update
  */
-export type TSqlQnaLogDetailUpdate = Omit<TSqlQnaLogDetail, "id">;
+export type TSqlQnaLogDetailUpdate = Partial<Omit<TSqlQnaLogDetail, "id">>;
 
 /*
  * DB 컬럼 목록 For City List For Admin

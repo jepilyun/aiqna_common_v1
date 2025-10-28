@@ -33,4 +33,4 @@ export type TSqlProcessingLogYoutubeVideoInsert = {
 /*
  * DB 컬럼 목록 For Youtube Video Processing Log
  */
-export type TSqlProcessingLogYoutubeVideoUpdate = Omit<TSqlProcessingLogYoutubeVideo, "video_id">;
+export type TSqlProcessingLogYoutubeVideoUpdate = Partial<Omit<TSqlProcessingLogYoutubeVideo, "video_id">>;
