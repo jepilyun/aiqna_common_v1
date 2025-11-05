@@ -1,3 +1,4 @@
+import { TTravelTipItem } from "../t-travel-tip.js";
 export type TSqlYoutubeVideoList = {
     video_id: string;
     title: string;
@@ -36,7 +37,7 @@ export type TSqlYoutubeVideoDetail = TSqlYoutubeVideoList & {
     info_time_of_day: string[] | null;
     info_activity_type: string[] | null;
     info_reservation_required: boolean;
-    info_travel_tips: string[] | null;
+    info_travel_tips: TTravelTipItem[] | null;
     category_id: string | null;
     localized_title: string | null;
     localized_description: string | null;

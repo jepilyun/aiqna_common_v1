@@ -1,3 +1,4 @@
+import { TTravelTipItem } from "../t-travel-tip.js";
 export type TSqlInstagramPostList = {
     uuid_36: string;
     instagram_post_url: string;
@@ -38,7 +39,7 @@ export type TSqlInstagramPostDetail = TSqlInstagramPostList & {
     info_time_of_day: string[] | null;
     info_activity_type: string[] | null;
     info_reservation_required: boolean;
-    info_travel_tips: string[] | null;
+    info_travel_tips: TTravelTipItem[] | null;
     description: string | null;
     tags: string[];
     user_profile_url: string | null;

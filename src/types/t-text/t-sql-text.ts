@@ -1,3 +1,5 @@
+import { TTravelTipItem } from "../t-travel-tip.js";
+
 /*
  * DB 컬럼 목록 For Blog Post
  */
@@ -29,7 +31,7 @@ export type TSqlTextDetail = TSqlTextList & {
   info_time_of_day: string[] | null;
   info_activity_type: string[] | null;
   info_reservation_required: boolean;
-  info_travel_tips: string[] | null;
+  info_travel_tips: TTravelTipItem[] | null;
   metadata_json: string | null;
   deleted_at: string | null;
 };
