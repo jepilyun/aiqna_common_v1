@@ -2,24 +2,24 @@
  * 리스트 조회 기본 제한 개수
  */
 export declare const LIST_LIMIT: {
-    start: number;
-    default: number;
-    n30: number;
-    n50: number;
-    n100: number;
-    n200: number;
+    readonly start: 0;
+    readonly default: 36;
+    readonly n30: 30;
+    readonly n50: 50;
+    readonly n100: 100;
+    readonly n200: 200;
 };
 /**
  * 쿠키 이름
  */
 export declare const COOKIE_NAME: {
-    access_token_admin: string;
-    refresh_token_admin: string;
-    access_token_user: string;
-    refresh_token_user: string;
+    readonly access_token_admin: "aiqna-access-token-admin";
+    readonly refresh_token_admin: "aiqna-refresh-token-admin";
+    readonly access_token_user: "aiqna-access-token";
+    readonly refresh_token_user: "aiqna-refresh-token";
 };
 /**
- * 기본 값 목록
+ * 앱 전역 기본값
  */
 export declare const DEFAULT_VALUES: {
     readonly COUNTRY: {
@@ -37,14 +37,21 @@ export declare const DEFAULT_VALUES: {
     readonly LANGUAGE: "ko";
     readonly NOT_SELECTED: "NOT_SELECTED";
 };
+/**
+ * 비동기 작업 처리 상태
+ */
 export declare const PROCESSING_STATUS: {
     readonly PENDING: "pending";
     readonly PROCESSING: "processing";
     readonly COMPLETED: "completed";
     readonly FAILED: "failed";
 };
-export type ProcessingStatus = typeof PROCESSING_STATUS[keyof typeof PROCESSING_STATUS];
-export declare const PINECONE_INDEX_NAME: {
+export type ProcessingStatus = (typeof PROCESSING_STATUS)[keyof typeof PROCESSING_STATUS];
+/**
+ * Pinecone 인덱스 이름
+ * 패턴: {도메인}-{도시}-{임베딩모델}
+ */
+export declare const VECTOR_DB_INDEX: {
     readonly TRAVEL_SEOUL: {
         readonly OPENAI_SMALL: "travel-seoul-openai-small";
         readonly COHERE_MULTI: "travel-seoul-cohere-multi";
@@ -64,6 +71,12 @@ export declare const PINECONE_INDEX_NAME: {
         readonly HF_KOREAN: "travel-jeju-hf-korean";
     };
 };
+/**
+ * 임베딩 모델 ID
+ * @see https://platform.openai.com/docs/guides/embeddings
+ * @see https://docs.cohere.com/docs/models#embed
+ * @see https://docs.voyageai.com/docs/embeddings
+ */
 export declare const EMBEDDING_MODEL: {
     readonly OPENAI: {
         readonly SMALL: "text-embedding-3-small";
@@ -84,6 +97,9 @@ export declare const EMBEDDING_MODEL: {
         readonly LARGE: "text-embedding-004-large";
     };
 };
+/**
+ * 폼 필드 공통 Props
+ */
 export type TFormFieldProps = {
     id: string;
     label: string;

@@ -1,3 +1,6 @@
+// ============================================================
+// List Pagination
+// ============================================================
 /**
  * 리스트 조회 기본 제한 개수
  */
@@ -9,6 +12,9 @@ export const LIST_LIMIT = {
     n100: 100,
     n200: 200,
 };
+// ============================================================
+// Authentication
+// ============================================================
 /**
  * 쿠키 이름
  */
@@ -18,8 +24,11 @@ export const COOKIE_NAME = {
     access_token_user: "aiqna-access-token",
     refresh_token_user: "aiqna-refresh-token",
 };
+// ============================================================
+// Default Values
+// ============================================================
 /**
- * 기본 값 목록
+ * 앱 전역 기본값
  */
 export const DEFAULT_VALUES = {
     COUNTRY: {
@@ -37,13 +46,26 @@ export const DEFAULT_VALUES = {
     LANGUAGE: "ko",
     NOT_SELECTED: "NOT_SELECTED",
 };
+// ============================================================
+// Processing Status
+// ============================================================
+/**
+ * 비동기 작업 처리 상태
+ */
 export const PROCESSING_STATUS = {
-    PENDING: 'pending',
-    PROCESSING: 'processing',
-    COMPLETED: 'completed',
-    FAILED: 'failed',
+    PENDING: "pending",
+    PROCESSING: "processing",
+    COMPLETED: "completed",
+    FAILED: "failed",
 };
-export const PINECONE_INDEX_NAME = {
+// ============================================================
+// Vector Database
+// ============================================================
+/**
+ * Pinecone 인덱스 이름
+ * 패턴: {도메인}-{도시}-{임베딩모델}
+ */
+export const VECTOR_DB_INDEX = {
     TRAVEL_SEOUL: {
         OPENAI_SMALL: "travel-seoul-openai-small",
         COHERE_MULTI: "travel-seoul-cohere-multi",
@@ -63,20 +85,29 @@ export const PINECONE_INDEX_NAME = {
         HF_KOREAN: "travel-jeju-hf-korean",
     },
 };
+// ============================================================
+// Embedding Models
+// ============================================================
+/**
+ * 임베딩 모델 ID
+ * @see https://platform.openai.com/docs/guides/embeddings
+ * @see https://docs.cohere.com/docs/models#embed
+ * @see https://docs.voyageai.com/docs/embeddings
+ */
 export const EMBEDDING_MODEL = {
     OPENAI: {
-        SMALL: "text-embedding-3-small",
+        SMALL: "text-embedding-3-small", // 1536 dims
         MEDIUM: "text-embedding-3-medium",
-        LARGE: "text-embedding-3-large",
+        LARGE: "text-embedding-3-large", // 3072 dims
     },
     COHERE: {
-        MULTI: "embed-multilingual-v3.0",
+        MULTI: "embed-multilingual-v3.0", // 1024 dims, 100+ languages
     },
     VOYAGE: {
-        LARGE_2: "voyage-large-2",
+        LARGE_2: "voyage-large-2", // 1536 dims
     },
     HUGGINGFACE: {
-        KO_SROBERTA_MULTITASK: "jhgan/ko-sroberta-multitask",
+        KO_SROBERTA_MULTITASK: "jhgan/ko-sroberta-multitask", // 768 dims, 한국어 특화
     },
     GEMINI: {
         BASE: "text-embedding-004",

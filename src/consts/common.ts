@@ -1,3 +1,7 @@
+// ============================================================
+// List Pagination
+// ============================================================
+
 /**
  * 리스트 조회 기본 제한 개수
  */
@@ -8,7 +12,11 @@ export const LIST_LIMIT = {
   n50: 50,
   n100: 100,
   n200: 200,
-};
+} as const;
+
+// ============================================================
+// Authentication
+// ============================================================
 
 /**
  * 쿠키 이름
@@ -18,10 +26,14 @@ export const COOKIE_NAME = {
   refresh_token_admin: "aiqna-refresh-token-admin",
   access_token_user: "aiqna-access-token",
   refresh_token_user: "aiqna-refresh-token",
-};
+} as const;
+
+// ============================================================
+// Default Values
+// ============================================================
 
 /**
- * 기본 값 목록
+ * 앱 전역 기본값
  */
 export const DEFAULT_VALUES = {
   COUNTRY: {
@@ -40,18 +52,32 @@ export const DEFAULT_VALUES = {
   NOT_SELECTED: "NOT_SELECTED",
 } as const;
 
+// ============================================================
+// Processing Status
+// ============================================================
 
+/**
+ * 비동기 작업 처리 상태
+ */
 export const PROCESSING_STATUS = {
-  PENDING: 'pending',
-  PROCESSING: 'processing',
-  COMPLETED: 'completed',
-  FAILED: 'failed',
+  PENDING: "pending",
+  PROCESSING: "processing",
+  COMPLETED: "completed",
+  FAILED: "failed",
 } as const;
 
-export type ProcessingStatus = typeof PROCESSING_STATUS[keyof typeof PROCESSING_STATUS];
+export type ProcessingStatus =
+  (typeof PROCESSING_STATUS)[keyof typeof PROCESSING_STATUS];
 
+// ============================================================
+// Vector Database
+// ============================================================
 
-export const PINECONE_INDEX_NAME = {
+/**
+ * Pinecone 인덱스 이름
+ * 패턴: {도메인}-{도시}-{임베딩모델}
+ */
+export const VECTOR_DB_INDEX = {
   TRAVEL_SEOUL: {
     OPENAI_SMALL: "travel-seoul-openai-small",
     COHERE_MULTI: "travel-seoul-cohere-multi",
@@ -72,20 +98,30 @@ export const PINECONE_INDEX_NAME = {
   },
 } as const;
 
+// ============================================================
+// Embedding Models
+// ============================================================
+
+/**
+ * 임베딩 모델 ID
+ * @see https://platform.openai.com/docs/guides/embeddings
+ * @see https://docs.cohere.com/docs/models#embed
+ * @see https://docs.voyageai.com/docs/embeddings
+ */
 export const EMBEDDING_MODEL = {
   OPENAI: {
-    SMALL: "text-embedding-3-small",
+    SMALL: "text-embedding-3-small", // 1536 dims
     MEDIUM: "text-embedding-3-medium",
-    LARGE: "text-embedding-3-large",
+    LARGE: "text-embedding-3-large", // 3072 dims
   },
   COHERE: {
-    MULTI: "embed-multilingual-v3.0",
+    MULTI: "embed-multilingual-v3.0", // 1024 dims, 100+ languages
   },
   VOYAGE: {
-    LARGE_2: "voyage-large-2",
+    LARGE_2: "voyage-large-2", // 1536 dims
   },
   HUGGINGFACE: {
-    KO_SROBERTA_MULTITASK: "jhgan/ko-sroberta-multitask",
+    KO_SROBERTA_MULTITASK: "jhgan/ko-sroberta-multitask", // 768 dims, 한국어 특화
   },
   GEMINI: {
     BASE: "text-embedding-004",
@@ -93,8 +129,13 @@ export const EMBEDDING_MODEL = {
   },
 } as const;
 
+// ============================================================
+// Form Types
+// ============================================================
 
-
+/**
+ * 폼 필드 공통 Props
+ */
 export type TFormFieldProps = {
   id: string;
   label: string;

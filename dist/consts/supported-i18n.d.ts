@@ -1,5 +1,5 @@
 /**
- * 지원 언어 정보 (코드와 이름 포함)
+ * 지원 언어 정보 (코드, 영문명, 원어명)
  */
 export declare const SUPPORTED_LANGUAGES: {
     readonly ko: {
@@ -59,19 +59,19 @@ export declare const SUPPORTED_LANGUAGES: {
     };
 };
 /**
- * 지원 언어 코드 목록 (배열)
- */
-export declare const SUPPORTED_LANGUAGE_CODES: TSupportedLangCode[];
-/**
  * 지원 언어 코드 타입
  */
 export type TSupportedLangCode = keyof typeof SUPPORTED_LANGUAGES;
 /**
- * 지원 언어 이름 타입
+ * 지원 언어 영문명 타입
  */
-export type TSupportedLangName = typeof SUPPORTED_LANGUAGES[keyof typeof SUPPORTED_LANGUAGES]["lang_name"];
+export type TSupportedLangName = (typeof SUPPORTED_LANGUAGES)[TSupportedLangCode]["lang_name"];
 /**
- * 지원 국가 정보 (코드, 이름, 주요 언어 포함)
+ * 지원 언어 코드 배열
+ */
+export declare const SUPPORTED_LANGUAGE_CODES: TSupportedLangCode[];
+/**
+ * 지원 국가 정보 (코드, 영문명, 원어명, 주요 언어)
  */
 export declare const SUPPORTED_COUNTRIES: {
     readonly AA: {
@@ -92,10 +92,16 @@ export declare const SUPPORTED_COUNTRIES: {
         readonly native_name: "日本";
         readonly primary_lang_code: TSupportedLangCode;
     };
-    readonly TH: {
-        readonly country_code: "TH";
-        readonly country_name: "Thailand";
-        readonly native_name: "ประเทศไทย";
+    readonly CN: {
+        readonly country_code: "CN";
+        readonly country_name: "China";
+        readonly native_name: "中国";
+        readonly primary_lang_code: TSupportedLangCode;
+    };
+    readonly TW: {
+        readonly country_code: "TW";
+        readonly country_name: "Taiwan";
+        readonly native_name: "臺灣";
         readonly primary_lang_code: TSupportedLangCode;
     };
     readonly HK: {
@@ -110,28 +116,22 @@ export declare const SUPPORTED_COUNTRIES: {
         readonly native_name: "澳門";
         readonly primary_lang_code: TSupportedLangCode;
     };
-    readonly SG: {
-        readonly country_code: "SG";
-        readonly country_name: "Singapore";
-        readonly native_name: "Singapore";
-        readonly primary_lang_code: TSupportedLangCode;
-    };
-    readonly TW: {
-        readonly country_code: "TW";
-        readonly country_name: "Taiwan";
-        readonly native_name: "臺灣";
-        readonly primary_lang_code: TSupportedLangCode;
-    };
-    readonly CN: {
-        readonly country_code: "CN";
-        readonly country_name: "China";
-        readonly native_name: "中国";
+    readonly TH: {
+        readonly country_code: "TH";
+        readonly country_name: "Thailand";
+        readonly native_name: "ประเทศไทย";
         readonly primary_lang_code: TSupportedLangCode;
     };
     readonly VN: {
         readonly country_code: "VN";
         readonly country_name: "Vietnam";
         readonly native_name: "Việt Nam";
+        readonly primary_lang_code: TSupportedLangCode;
+    };
+    readonly SG: {
+        readonly country_code: "SG";
+        readonly country_name: "Singapore";
+        readonly native_name: "Singapore";
         readonly primary_lang_code: TSupportedLangCode;
     };
     readonly ID: {
@@ -148,14 +148,14 @@ export declare const SUPPORTED_COUNTRIES: {
     };
 };
 /**
- * 지원 국가 코드 목록 (배열)
- */
-export declare const SUPPORTED_COUNTRY_CODES: TSupportedCountryCode[];
-/**
  * 지원 국가 코드 타입
  */
 export type TSupportedCountryCode = keyof typeof SUPPORTED_COUNTRIES;
 /**
- * 지원 국가 이름 타입
+ * 지원 국가 영문명 타입
  */
-export type TSupportedCountryName = typeof SUPPORTED_COUNTRIES[keyof typeof SUPPORTED_COUNTRIES]["country_name"];
+export type TSupportedCountryName = (typeof SUPPORTED_COUNTRIES)[TSupportedCountryCode]["country_name"];
+/**
+ * 지원 국가 코드 배열
+ */
+export declare const SUPPORTED_COUNTRY_CODES: TSupportedCountryCode[];
